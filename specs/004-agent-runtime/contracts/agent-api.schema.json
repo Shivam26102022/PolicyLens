@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/agent-api-v1.json",
+  "title": "PolicyLens Bounded Agent API v1",
+  "$defs": {
+    "EvidenceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passage_id", "excerpt"],
+      "properties": {
+        "passage_id": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+        "excerpt": { "type": "string", "minLength": 1, "maxLength": 500 }
+      }
+    },
+    "DraftClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "text", "evidence", "calculation_ids"],
+      "properties": {
+        "claim_id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "description": "For corpus claims, provide a concise factual summary supported by exact excerpts in evidence. For calculation-only claims, the host replaces this with a deterministic summary."
+        },
+        "evidence": {
+          "type": "array",
+          "maxItems": 8,
+          "items": { "$ref": "#/$defs/EvidenceReference" }
+        },
+        "calculation_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 4,
+          "items": { "type": "string", "format": "uuid" }
+        }
+      },
+      "anyOf": [
+        { "properties": { "evidence": { "minItems": 1 } } },
+        { "properties": { "calculation_ids": { "minItems": 1 } } }
+      ]
+    },
+    "DraftConflict": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "claim_ids"],
+      "properties": {
+        "summary": { "type": "string", "minLength": 1, "maxLength": 1000 },
+        "claim_ids": { "type": "array", "minItems": 2, "maxItems": 8, "uniqueItems": true, "items": { "type": "string" } }
+      }
+    },
+    "Draft": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "claims", "clarification_question", "abstention_reason", "conflicts", "uncertainty", "limitations"],
+      "properties": {
+        "status": { "enum": ["answered", "clarification_required", "abstained", "conflict", "blocked"] },
+        "claims": { "type": "array", "maxItems": 12, "items": { "$ref": "#/$defs/DraftClaim" } },
+        "clarification_question": { "type": ["string", "null"], "maxLength": 1000 },
+        "abstention_reason": { "type": ["string", "null"], "maxLength": 1000 },
+        "conflicts": { "type": "array", "maxItems": 5, "items": { "$ref": "#/$defs/DraftConflict" } },
+        "uncertainty": { "type": "array", "maxItems": 10, "items": { "type": "string", "maxLength": 500 } },
+        "limitations": { "type": "array", "maxItems": 10, "items": { "type": "string", "maxLength": 500 } }
+      }
+    },
+    "Request": {
+      "$ref": "https://policylens.local/schemas/retrieval-api-v1.json#/$defs/SearchRequest"
+    },
+    "CalculationEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "row_keys", "content_sha256"],
+      "properties": {
+        "source_id": { "type": "string", "minLength": 1 },
+        "row_keys": { "type": "array", "minItems": 1, "maxItems": 100, "items": { "$ref": "https://policylens.local/schemas/retrieval-api-v1.json#/$defs/RowKey" } },
+        "content_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "CalculationRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["geography", "year", "value", "unit", "status"],
+      "properties": {
+        "geography": { "type": ["string", "null"], "maxLength": 100 },
+        "year": { "type": ["integer", "null"], "minimum": 1900, "maximum": 2100 },
+        "value": { "type": ["number", "null"] },
+        "unit": { "type": ["string", "null"], "maxLength": 100 },
+        "status": { "type": ["string", "null"], "maxLength": 100 }
+      }
+    },
+    "Calculation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["calculation_id", "tool_call_id", "tool_name", "operation", "formula", "rounding", "rows", "evidence", "warnings"],
+      "properties": {
+        "calculation_id": { "type": "string", "format": "uuid" },
+        "tool_call_id": { "type": "string", "format": "uuid" },
+        "tool_name": { "const": "query_statistics" },
+        "operation": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "formula": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "rounding": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "rows": { "type": "array", "maxItems": 100, "items": { "$ref": "#/$defs/CalculationRow" } },
+        "evidence": { "type": "array", "minItems": 1, "maxItems": 20, "items": { "$ref": "#/$defs/CalculationEvidence" } },
+        "warnings": { "type": "array", "maxItems": 20, "items": { "type": "string", "maxLength": 500 } }
+      }
+    },
+    "Claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "text", "citations", "calculation_ids"],
+      "properties": {
+        "claim_id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "description": "Concise factual claim linked to exact cited excerpts, or a host-generated deterministic calculation summary."
+        },
+        "citations": { "type": "array", "maxItems": 8, "items": { "$ref": "https://policylens.local/schemas/citation-v1.json#/$defs/Citation" } },
+        "calculation_ids": { "type": "array", "uniqueItems": true, "maxItems": 4, "items": { "type": "string", "format": "uuid" } }
+      },
+      "anyOf": [
+        { "properties": { "citations": { "minItems": 1 } } },
+        { "properties": { "calculation_ids": { "minItems": 1 } } }
+      ]
+    },
+    "Conflict": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "claim_ids"],
+      "properties": {
+        "summary": { "type": "string", "minLength": 1, "maxLength": 1000 },
+        "claim_ids": { "type": "array", "minItems": 2, "maxItems": 8, "uniqueItems": true, "items": { "type": "string" } }
+      }
+    },
+    "Event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sequence", "occurred_at", "state", "event_type", "status", "tool_name", "tool_call_id", "duration_ms", "retry_count", "item_count", "error_code", "reranker_model", "model_route", "reasoning_effort", "model_usage", "reasoning_summary"],
+      "properties": {
+        "sequence": { "type": "integer", "minimum": 1, "maximum": 200 },
+        "occurred_at": { "type": "string", "format": "date-time" },
+        "state": { "enum": ["received", "validated", "retrieving", "assessing", "tool_execution", "output_validation", "citation_validation", "answered", "clarification_required", "abstained", "conflict", "blocked", "failed_safe"] },
+        "event_type": { "enum": ["state_transition", "retrieval_completed", "reranking_completed", "mcp_resource_started", "mcp_resource_completed", "tool_started", "tool_completed", "model_started", "model_completed", "output_validated", "citations_validated", "terminal", "session_context_loaded", "memory_retrieval_completed", "session_turn_persisted", "memory_write_completed"] },
+        "status": { "enum": ["started", "succeeded", "failed", "skipped"] },
+        "tool_name": { "type": ["string", "null"], "enum": ["query_statistics", null] },
+        "tool_call_id": { "type": ["string", "null"], "format": "uuid" },
+        "duration_ms": { "type": ["number", "null"], "minimum": 0 },
+        "retry_count": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "item_count": { "type": ["integer", "null"], "minimum": 0, "maximum": 20 },
+        "error_code": { "type": ["string", "null"], "maxLength": 80, "description": "Safe stable error or validation reason code; never raw exception text or payload." },
+        "reranker_model": { "type": ["string", "null"], "maxLength": 300 },
+        "model_route": { "type": ["string", "null"], "enum": ["openai_responses", "openai_chat_completions", "mlx_chat_completions", null] },
+        "reasoning_effort": { "type": ["string", "null"], "enum": ["none", "low", "medium", "high", null] },
+        "model_usage": {
+          "anyOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["requests", "prompt_tokens", "completion_tokens", "total_tokens", "cached_input_tokens", "reasoning_tokens", "cost_usd", "memory_bytes"],
+              "properties": {
+                "requests": { "type": ["integer", "null"], "minimum": 0 },
+                "prompt_tokens": { "type": ["integer", "null"], "minimum": 0 },
+                "completion_tokens": { "type": ["integer", "null"], "minimum": 0 },
+                "total_tokens": { "type": ["integer", "null"], "minimum": 0 },
+                "cached_input_tokens": { "type": ["integer", "null"], "minimum": 0 },
+                "reasoning_tokens": { "type": ["integer", "null"], "minimum": 0 },
+                "cost_usd": { "type": ["number", "null"], "minimum": 0 },
+                "memory_bytes": { "type": ["integer", "null"], "minimum": 0 }
+              }
+            }
+          ]
+        },
+        "reasoning_summary": { "type": ["string", "null"], "maxLength": 4000 }
+      }
+    },
+    "Response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "run_id", "trace_id", "index_version", "status", "answer", "claims", "calculations", "uncertainty", "conflicts", "clarification_question", "limitations", "provider", "model", "session_context", "model_metadata", "prompt_version", "events", "error_code"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "run_id": { "type": "string", "format": "uuid" },
+        "trace_id": { "type": "string", "format": "uuid" },
+        "index_version": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "status": { "enum": ["answered", "clarification_required", "abstained", "conflict", "blocked", "failed_safe"] },
+        "answer": { "type": ["string", "null"], "maxLength": 12000 },
+        "claims": { "type": "array", "maxItems": 12, "items": { "$ref": "#/$defs/Claim" } },
+        "calculations": { "type": "array", "maxItems": 8, "items": { "$ref": "#/$defs/Calculation" } },
+        "uncertainty": { "type": "array", "maxItems": 10, "items": { "type": "string", "maxLength": 500 } },
+        "conflicts": { "type": "array", "maxItems": 5, "items": { "$ref": "#/$defs/Conflict" } },
+        "clarification_question": { "type": ["string", "null"], "maxLength": 1000 },
+        "limitations": { "type": "array", "maxItems": 10, "items": { "type": "string", "maxLength": 500 } },
+        "provider": { "enum": ["openai", "mlx"] },
+        "model": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "session_context": {
+          "anyOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["session_id", "turn_id", "persisted", "long_memory_enabled", "memory_retrieval_status", "retrieved_memory_count", "memory_write_status"],
+              "properties": {
+                "session_id": { "type": "string", "format": "uuid" },
+                "turn_id": { "type": "string", "format": "uuid" },
+                "persisted": { "type": "boolean" },
+                "long_memory_enabled": { "type": "boolean" },
+                "memory_retrieval_status": { "enum": ["used", "empty", "disabled", "unavailable", "embedding_mismatch"] },
+                "retrieved_memory_count": { "type": "integer", "minimum": 0, "maximum": 5 },
+                "memory_write_status": { "enum": ["stored", "skipped", "failed"] }
+              }
+            }
+          ]
+        },
+        "model_metadata": {
+          "anyOf": [
+            { "type": "null" },
+            { "$ref": "https://policylens.local/schemas/model-run-metadata-v1.json" }
+          ]
+        },
+        "prompt_version": { "enum": ["agent-v1", "agent-v2"] },
+        "events": { "type": "array", "maxItems": 200, "items": { "$ref": "#/$defs/Event" } },
+        "error_code": { "type": ["string", "null"], "enum": ["INVALID_REQUEST", "AMBIGUOUS_REQUEST", "OUT_OF_SCOPE", "INSUFFICIENT_EVIDENCE", "CONFLICTING_EVIDENCE", "RETRIEVAL_UNAVAILABLE", "MODEL_UNAVAILABLE", "MCP_UNAVAILABLE", "MCP_TIMEOUT", "MCP_IDENTITY_MISMATCH", "MCP_CAPABILITY_MISMATCH", "MCP_SCHEMA_INVALID", "MCP_MALFORMED_RESPONSE", "MCP_RESOURCE_NOT_FOUND", "MCP_CATALOG_STALE", "MCP_INTERNAL_ERROR", "MCP_PASSAGE_MISMATCH", "TOOL_INVALID_ARGUMENTS", "TOOL_MALFORMED_RESPONSE", "TOOL_BUDGET_EXCEEDED", "TOOL_PERMISSION_DENIED", "OUTPUT_SCHEMA_INVALID", "CITATION_INVALID", "POLICY_BLOCKED", "INTERNAL_ERROR", null] }
+      }
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/$defs/Request" },
+    { "$ref": "#/$defs/Draft" },
+    { "$ref": "#/$defs/Response" }
+  ]
+}

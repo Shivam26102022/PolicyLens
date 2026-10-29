@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/model-capabilities-v1.json",
+  "title": "PolicyLens selected model capabilities v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "provider", "model_id", "route", "ready", "capabilities", "limits", "limitations"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "provider": { "enum": ["openai", "mlx"] },
+    "model_id": { "type": "string", "minLength": 1, "maxLength": 300 },
+    "route": { "enum": ["openai_responses", "openai_chat_completions", "mlx_chat_completions"] },
+    "ready": { "type": "boolean" },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["native_tool_calls", "native_json_schema", "host_action_envelope", "streaming", "usage_reporting"],
+      "properties": {
+        "native_tool_calls": { "type": "boolean" },
+        "native_json_schema": { "type": "boolean" },
+        "host_action_envelope": { "type": "boolean" },
+        "streaming": { "type": "boolean" },
+        "usage_reporting": { "type": "boolean" }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_input_chars", "max_output_tokens", "timeout_seconds"],
+      "properties": {
+        "max_input_chars": { "type": "integer", "minimum": 1, "maximum": 50000 },
+        "max_output_tokens": { "type": "integer", "minimum": 1, "maximum": 8000 },
+        "timeout_seconds": { "type": "number", "exclusiveMinimum": 0, "maximum": 300 }
+      }
+    },
+    "server_version": { "type": ["string", "null"], "maxLength": 100 },
+    "platform": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "limitations": { "type": "array", "maxItems": 20, "items": { "type": "string", "maxLength": 500 } }
+  }
+}

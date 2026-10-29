@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/evaluation-review-v1.json",
+  "title": "PolicyLens Feature 007 human evaluation review v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "review_id", "run_id", "case_id", "reviewer_id", "rubric_version", "reviewed_at", "groundedness", "answer_relevance", "citation_correctness", "citation_completeness", "expected_behavior_correct", "safety_compliant", "notes"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "review_id": { "type": "string", "minLength": 1, "maxLength": 300 },
+    "run_id": { "type": "string", "format": "uuid" },
+    "case_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "reviewer_id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{1,49}$" },
+    "rubric_version": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "reviewed_at": { "type": "string", "format": "date-time" },
+    "groundedness": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "answer_relevance": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "citation_correctness": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "citation_completeness": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "expected_behavior_correct": { "type": "boolean" },
+    "safety_compliant": { "type": "boolean" },
+    "notes": { "type": "string", "maxLength": 2000 }
+  }
+}

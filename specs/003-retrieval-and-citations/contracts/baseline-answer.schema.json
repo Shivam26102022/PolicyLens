@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/baseline-answer-v1.json",
+  "title": "PolicyLens Non-Agent RAG Baseline Contract v1",
+  "$defs": {
+    "Filters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_ids": { "type": "array", "maxItems": 20, "items": { "type": "string" } },
+        "country_iso3": { "type": "array", "maxItems": 20, "items": { "type": "string", "pattern": "^[A-Z]{3}$" } },
+        "years": { "type": "array", "maxItems": 50, "items": { "type": "integer", "minimum": 1900, "maximum": 2100 } },
+        "indicator_ids": { "type": "array", "maxItems": 20, "items": { "type": "string" } }
+      }
+    },
+    "Request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "query", "mode"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "query": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "mode": { "enum": ["bm25", "dense", "hybrid"] },
+        "top_k": { "type": "integer", "minimum": 1, "maximum": 20, "default": 6 },
+        "filters": { "$ref": "#/$defs/Filters" }
+      }
+    },
+    "EvidenceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passage_id", "excerpt"],
+      "properties": {
+        "passage_id": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+        "excerpt": { "type": "string", "minLength": 1, "maxLength": 500 }
+      }
+    },
+    "DraftClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "text", "evidence"],
+      "properties": {
+        "claim_id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "description": "Verbatim excerpt; must exactly equal one evidence excerpt."
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": { "$ref": "#/$defs/EvidenceReference" }
+        }
+      }
+    },
+    "Draft": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "claims"],
+      "properties": {
+        "status": { "enum": ["answered", "abstained"] },
+        "claims": {
+          "type": "array",
+          "maxItems": 12,
+          "items": { "$ref": "#/$defs/DraftClaim" }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "answered" } }, "required": ["status"] },
+          "then": { "properties": { "claims": { "minItems": 1 } } },
+          "else": { "properties": { "claims": { "maxItems": 0 } } }
+        }
+      ]
+    },
+    "AnswerClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "text", "citations"],
+      "properties": {
+        "claim_id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "description": "Verbatim excerpt; must exactly equal one citation excerpt."
+        },
+        "citations": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": { "$ref": "https://policylens.local/schemas/citation-v1.json#/$defs/Citation" }
+        }
+      }
+    },
+    "Response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "status", "run_id", "index_version", "claims", "error_code", "generation"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "status": { "enum": ["answered", "abstained", "failed_safe"] },
+        "run_id": { "type": "string", "format": "uuid" },
+        "index_version": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "claims": {
+          "type": "array",
+          "maxItems": 12,
+          "items": { "$ref": "#/$defs/AnswerClaim" }
+        },
+        "error_code": {
+          "type": ["string", "null"],
+          "enum": ["NO_EVIDENCE", "MODEL_ABSTAINED", "GENERATION_UNAVAILABLE", "INVALID_MODEL_OUTPUT", "INVALID_CITATION", null]
+        },
+        "generation": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["provider", "model_id", "prompt_version", "latency_ms", "usage", "fallback_decision"],
+              "properties": {
+                "provider": { "enum": ["openai", "mlx"] },
+                "model_id": { "type": "string", "minLength": 1, "maxLength": 300 },
+                "prompt_version": { "const": "non-agent-v1" },
+                "fallback_decision": { "const": "none" },
+                "latency_ms": { "type": "number", "minimum": 0 },
+                "usage": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["prompt_tokens", "completion_tokens", "total_tokens", "cost_usd", "memory_bytes"],
+                  "properties": {
+                    "prompt_tokens": { "type": ["integer", "null"], "minimum": 0 },
+                    "completion_tokens": { "type": ["integer", "null"], "minimum": 0 },
+                    "total_tokens": { "type": ["integer", "null"], "minimum": 0 },
+                    "cost_usd": { "type": ["number", "null"], "minimum": 0 },
+                    "memory_bytes": { "type": ["integer", "null"], "minimum": 0 }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "answered" } }, "required": ["status"] },
+          "then": {
+            "properties": { "claims": { "minItems": 1 }, "error_code": { "const": null } }
+          },
+          "else": {
+            "properties": {
+              "claims": { "maxItems": 0 },
+              "error_code": { "type": "string", "not": { "const": null } }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/$defs/Request" },
+    { "$ref": "#/$defs/Draft" },
+    { "$ref": "#/$defs/Response" }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/mcp-passage-resource-v1.json",
+  "title": "PolicyLens MCP passage catalog/resource contract v1",
+  "$defs": {
+    "Location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["page_number", "block_id", "start_char", "end_char"],
+      "properties": {
+        "page_number": { "type": "integer", "minimum": 1 },
+        "block_id": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "start_char": { "type": "integer", "minimum": 0 },
+        "end_char": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "RowKey": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset_id", "observation_id", "indicator_id", "country_iso3", "year"],
+      "properties": {
+        "dataset_id": { "type": "string", "minLength": 1 },
+        "observation_id": { "type": "string", "minLength": 1 },
+        "indicator_id": { "type": "string", "minLength": 1 },
+        "country_iso3": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "year": { "type": "integer", "minimum": 1900, "maximum": 2100 }
+      }
+    },
+    "PassageRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passage_id", "source_id", "title", "publisher", "source_uri", "text", "text_sha256", "source_content_sha256", "locations", "row_key", "section_path", "licence", "usage_constraints", "sensitivity", "permission_scope", "allowed_usage", "untrusted"],
+      "properties": {
+        "passage_id": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+        "source_id": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 1000 },
+        "publisher": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "source_uri": { "type": ["string", "null"], "format": "uri" },
+        "text": { "type": "string", "minLength": 1, "maxLength": 5000 },
+        "text_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "source_content_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "locations": { "type": "array", "maxItems": 20, "items": { "$ref": "#/$defs/Location" } },
+        "row_key": { "anyOf": [{ "$ref": "#/$defs/RowKey" }, { "type": "null" }] },
+        "section_path": { "type": "array", "maxItems": 20, "items": { "type": "string" } },
+        "licence": { "type": "string", "minLength": 1, "maxLength": 1000 },
+        "usage_constraints": { "type": ["string", "null"], "maxLength": 1000 },
+        "sensitivity": { "enum": ["public", "synthetic", "anonymised"] },
+        "permission_scope": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "allowed_usage": { "type": "array", "minItems": 1, "items": { "type": "string" }, "uniqueItems": true, "contains": { "const": "retrieval" }, "minContains": 1 },
+        "untrusted": { "const": true }
+      },
+      "anyOf": [
+        { "properties": { "locations": { "minItems": 1 }, "row_key": { "type": "null" } } },
+        { "properties": { "row_key": { "$ref": "#/$defs/RowKey" } } }
+      ]
+    },
+    "Catalog": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "index_version", "generated_at", "passages"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "index_version": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "generated_at": { "type": "string", "format": "date-time" },
+        "passages": { "type": "array", "maxItems": 10000, "items": { "$ref": "#/$defs/PassageRecord" } }
+      }
+    },
+    "Resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "passage"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "passage": { "$ref": "#/$defs/PassageRecord" }
+      }
+    },
+    "Error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "error_code", "message"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "error_code": { "enum": ["MCP_RESOURCE_NOT_FOUND", "MCP_CATALOG_STALE", "MCP_SCHEMA_INVALID", "MCP_PERMISSION_DENIED", "MCP_INTERNAL_ERROR"] },
+        "message": { "type": "string", "minLength": 1, "maxLength": 300 }
+      }
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/$defs/Catalog" },
+    { "$ref": "#/$defs/Resource" },
+    { "$ref": "#/$defs/Error" }
+  ]
+}

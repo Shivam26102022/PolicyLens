@@ -1,0 +1,1 @@
+"""Safe backend observability helpers."""

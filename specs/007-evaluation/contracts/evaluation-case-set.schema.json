@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/evaluation-case-set-v1.json",
+  "title": "PolicyLens Feature 007 evaluation case set v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "set_id", "lineage", "runtime_label_access", "cases"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "set_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "lineage": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "runtime_label_access": { "const": "prohibited" },
+    "cases": {
+      "type": "array",
+      "minItems": 30,
+      "maxItems": 100,
+      "items": { "$ref": "#/$defs/Case" }
+    }
+  },
+  "$defs": {
+    "Case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "category", "question", "mode", "top_k", "filters", "expected_behavior", "relevant_passage_ids", "expected_anchors", "relevance_grades", "reference_claims", "required_tools", "forbidden_behaviors", "difficulty", "split", "review_status", "lineage"],
+      "properties": {
+        "case_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "category": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "question": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "mode": { "enum": ["bm25", "dense", "hybrid"] },
+        "top_k": { "type": "integer", "minimum": 1, "maximum": 20 },
+        "filters": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "source_ids": { "type": "array", "maxItems": 20, "items": { "type": "string" } },
+            "country_iso3": { "type": "array", "maxItems": 20, "items": { "type": "string", "pattern": "^[A-Z]{3}$" } },
+            "years": { "type": "array", "maxItems": 50, "items": { "type": "integer", "minimum": 1900, "maximum": 2100 } },
+            "indicator_ids": { "type": "array", "maxItems": 20, "items": { "type": "string" } }
+          }
+        },
+        "expected_behavior": { "enum": ["answer", "clarify", "abstain", "conflict", "block"] },
+        "relevant_passage_ids": { "type": "array", "maxItems": 50, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "expected_anchors": { "type": "array", "maxItems": 20, "items": { "$ref": "#/$defs/EvidenceAnchor" } },
+        "relevance_grades": {
+          "type": "array",
+          "maxItems": 50,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["anchor", "grade"],
+            "properties": {
+              "anchor": { "$ref": "#/$defs/EvidenceAnchor" },
+              "grade": { "type": "integer", "minimum": 0, "maximum": 3 }
+            }
+          }
+        },
+        "reference_claims": { "type": "array", "maxItems": 20, "items": { "type": "string", "minLength": 1, "maxLength": 2000 } },
+        "required_tools": { "type": "array", "maxItems": 10, "uniqueItems": true, "items": { "enum": ["query_statistics"] } },
+        "forbidden_behaviors": { "type": "array", "maxItems": 20, "items": { "type": "string", "minLength": 1, "maxLength": 500 } },
+        "adversarial_fixture": { "type": ["string", "null"], "maxLength": 2000 },
+        "difficulty": { "enum": ["easy", "medium", "hard"] },
+        "split": { "enum": ["dev", "test"] },
+        "review_status": { "enum": ["candidate", "in_review", "approved", "rejected"] },
+        "reviewer_ids": { "type": "array", "maxItems": 5, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 100 } },
+        "reviewed_at": { "type": ["string", "null"], "format": "date-time" },
+        "lineage": { "type": "string", "minLength": 1, "maxLength": 1000 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "review_status": { "const": "approved" } }, "required": ["review_status"] },
+          "then": {
+            "required": ["reviewer_ids", "reviewed_at"],
+            "properties": {
+              "reviewer_ids": { "minItems": 1, "items": { "not": { "enum": ["ai-assistant", "automated", "system", "bot"] } } },
+              "reviewed_at": { "type": "string", "format": "date-time" }
+            }
+          }
+        }
+      ]
+    },
+    "EvidenceAnchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id"],
+      "properties": {
+        "source_id": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "page_number": { "type": ["integer", "null"], "minimum": 1 },
+        "marker": { "type": ["string", "null"], "minLength": 1, "maxLength": 300 },
+        "row_key": { "oneOf": [{ "$ref": "#/$defs/RowKey" }, { "type": "null" }] }
+      },
+      "oneOf": [
+        { "required": ["row_key"], "properties": { "row_key": { "$ref": "#/$defs/RowKey" } } },
+        { "required": ["page_number", "marker"], "properties": { "page_number": { "type": "integer", "minimum": 1 }, "marker": { "type": "string", "minLength": 1, "maxLength": 300 }, "row_key": { "type": "null" } } }
+      ]
+    },
+    "RowKey": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset_id", "observation_id", "indicator_id", "country_iso3", "year"],
+      "properties": {
+        "dataset_id": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "observation_id": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "indicator_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "country_iso3": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "year": { "type": "integer", "minimum": 1900, "maximum": 2100 }
+      }
+    }
+  }
+}

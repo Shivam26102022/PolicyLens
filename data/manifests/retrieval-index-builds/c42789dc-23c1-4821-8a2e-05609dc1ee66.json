@@ -1,0 +1,122 @@
+{
+  "bm25": {
+    "b": 0.75,
+    "k1": 1.5,
+    "method": "lucene",
+    "package_version": "0.3.15",
+    "stemming": null,
+    "stopwords": [],
+    "token_pattern": "(?u)\\b\\w+\\b",
+    "tokenizer": "unicode-word-v1"
+  },
+  "build_id": "c42789dc-23c1-4821-8a2e-05609dc1ee66",
+  "chunker": {
+    "include_section_breadcrumb": true,
+    "keep_heading_with_body": true,
+    "max_tokens": 500,
+    "min_tokens": 120,
+    "overlap_tokens": 75,
+    "preserve_lists": true,
+    "preserve_tables": true,
+    "strategy": "structure-aware",
+    "target_tokens": 450,
+    "tokenizer": "BAAI/bge-small-en-v1.5",
+    "version": "structure-aware-450-v4"
+  },
+  "corpus_sha256": "9588e822d00af350cb715f6bd37b9d710510d7aa2820d40cc600e3d2b5d7ba4f",
+  "counts": {
+    "bm25_records": 761,
+    "chroma_records": 761,
+    "documents": 6,
+    "passages": 761,
+    "sources": 6,
+    "structured_rows": 88
+  },
+  "elapsed_seconds": 2.835445135133341,
+  "embedding": {
+    "dimension": 384,
+    "licence": "mit",
+    "max_input_tokens": 512,
+    "model_id": "BAAI/bge-small-en-v1.5",
+    "model_revision": "aa8f8b060edb00e03bfdd08813a2949946c8ba55",
+    "model_sha256": "51f1bd0addd6e859e42c2c8021a5e5461385bb676a649f4b269aa445449f2431",
+    "normalized": true,
+    "package_version": "0.9.1",
+    "passage_method": "passage_embed",
+    "pooling": "first-token CLS",
+    "provider": "local",
+    "query_method": "query_embed",
+    "tokenizer": "BAAI/bge-small-en-v1.5"
+  },
+  "error_code": null,
+  "finished_at": "2026-10-26T01:24:16.109711Z",
+  "index_version": "45935afc940a7489563a38c32bbac909b0d8e6a9fb58182fb5c14e86ff130ea4",
+  "inputs": [
+    {
+      "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+      "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+      "parser_version": "report-1.0.0-pymupdf-1.28.2",
+      "raw_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+      "source_id": "wb-india-skills-programs-2015"
+    },
+    {
+      "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+      "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+      "parser_version": "report-1.0.0-pymupdf-1.28.2",
+      "raw_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+      "source_id": "wb-indonesia-jobs-action-2018"
+    },
+    {
+      "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+      "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+      "parser_version": "report-1.0.0-pymupdf-1.28.2",
+      "raw_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+      "source_id": "wb-malaysia-informal-employment-2024"
+    },
+    {
+      "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+      "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+      "parser_version": "report-1.0.0-pymupdf-1.28.2",
+      "raw_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+      "source_id": "wb-singapore-workforce-development-2012"
+    },
+    {
+      "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+      "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+      "parser_version": "1.1.0",
+      "raw_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+      "source_id": "wb-total-unemployment-2015-2025"
+    },
+    {
+      "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+      "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+      "parser_version": "1.1.0",
+      "raw_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+      "source_id": "wb-youth-unemployment-1524-2015-2025"
+    }
+  ],
+  "outputs": {
+    "bm25_path": "data/indexes/bm25/45935afc940a7489563a38c32bbac909b0d8e6a9fb58182fb5c14e86ff130ea4/c42789dc-23c1-4821-8a2e-05609dc1ee66",
+    "bm25_sha256": "f0962d1d14a341dc4fe5121e55bfb17e9104fbec048f0b88e054c30929ad3634",
+    "chroma_path": "data/indexes/chroma/45935afc940a7489563a38c32bbac909b0d8e6a9fb58182fb5c14e86ff130ea4/c42789dc-23c1-4821-8a2e-05609dc1ee66",
+    "chroma_sha256": "a55df876794684462b03c899d41095a39326ad6afa91d3d9f19274897696c580"
+  },
+  "schema_version": "1.0",
+  "started_at": "2026-10-26T01:24:13.274586Z",
+  "status": "validated",
+  "tokenizer": {
+    "name": "BAAI/bge-small-en-v1.5",
+    "version": "local:BAAI/bge-small-en-v1.5:0.9.1"
+  },
+  "validation": {
+    "checks": [
+      "canonical hashes verified",
+      "passage IDs unique",
+      "embedding dimensions and norms verified",
+      "Chroma count and permission-filter smoke query verified",
+      "BM25S save/load and passage-ID smoke query verified"
+    ],
+    "passed": true,
+    "smoke_case_ids": []
+  }
+}

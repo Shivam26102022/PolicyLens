@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/index-registry-v1.json",
+  "title": "PolicyLens Retrieval Index Registry v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "builds", "failures"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "builds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["build_id", "index_version", "status", "manifest_path", "manifest_sha256"],
+        "properties": {
+          "build_id": { "type": "string", "format": "uuid" },
+          "index_version": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "status": { "enum": ["validated", "activated", "superseded"] },
+          "manifest_path": { "type": "string", "pattern": "^data/manifests/retrieval-index-builds/" },
+          "manifest_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "previous_validation_error": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["build_id", "started_at", "finished_at", "error_code", "message"],
+        "properties": {
+          "build_id": { "type": "string", "format": "uuid" },
+          "started_at": { "type": "string", "format": "date-time" },
+          "finished_at": { "type": "string", "format": "date-time" },
+          "error_code": { "type": "string", "minLength": 1 },
+          "message": { "type": "string", "maxLength": 300 }
+        }
+      }
+    }
+  }
+}

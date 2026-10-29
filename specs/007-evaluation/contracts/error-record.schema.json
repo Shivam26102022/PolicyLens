@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/evaluation-error-record-v1.json",
+  "title": "PolicyLens Feature 007 error record v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "error_id", "run_id", "case_id", "expected_behavior", "observed_outcome", "failure_layer", "severity", "frequency", "root_cause_hypothesis", "proposed_intervention", "predicted_metric_impact", "regression_test"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "error_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "run_id": { "type": "string", "format": "uuid" },
+    "case_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "expected_behavior": { "enum": ["answer", "clarify", "abstain", "conflict", "block"] },
+    "observed_outcome": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "failure_layer": { "enum": ["data", "parsing", "retrieval", "context", "generation", "tool_selection", "tool_execution", "mcp", "validation", "policy", "ui"] },
+    "trace_id": { "type": ["string", "null"], "format": "uuid" },
+    "severity": { "enum": ["critical", "high", "medium", "low"] },
+    "frequency": { "type": "integer", "minimum": 1 },
+    "root_cause_hypothesis": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "supporting_trace_evidence": { "type": "array", "maxItems": 20, "items": { "type": "string", "maxLength": 1000 } },
+    "proposed_intervention": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "predicted_metric_impact": { "type": "string", "minLength": 1, "maxLength": 1000 },
+    "regression_test": { "type": "string", "minLength": 1, "maxLength": 500 }
+  }
+}

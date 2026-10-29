@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/provider-comparison-v1.json",
+  "title": "PolicyLens provider comparison report v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_set_id", "case_set_sha256", "prompt_version", "created_at", "platform", "providers", "case_count", "results", "summary", "limitations", "live_requests_made"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "case_set_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "case_set_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "prompt_version": { "enum": ["agent-v1", "agent-v2"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "platform": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "providers": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["provider", "model_id", "route", "runtime_version"],
+        "properties": {
+          "provider": { "enum": ["openai", "mlx"] },
+          "model_id": { "type": "string", "minLength": 1, "maxLength": 300 },
+          "route": { "type": "string", "minLength": 1, "maxLength": 100 },
+          "runtime_version": { "type": ["string", "null"], "maxLength": 100 }
+        }
+      }
+    },
+    "case_count": { "type": "integer", "minimum": 1, "maximum": 100 },
+    "results": {
+      "type": "array",
+      "maxItems": 200,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["case_id", "index_version", "provider", "status", "tool_selected", "arguments_valid", "structured_valid", "latency_ms", "usage", "groundedness", "answer_quality", "memory_bytes", "cost_usd"],
+        "properties": {
+          "case_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+          "index_version": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+          "provider": { "enum": ["openai", "mlx"] },
+          "status": { "enum": ["succeeded", "failed", "skipped"] },
+          "tool_selected": { "type": ["boolean", "null"] },
+          "arguments_valid": { "type": ["boolean", "null"] },
+          "structured_valid": { "type": "boolean" },
+          "latency_ms": { "type": ["number", "null"], "minimum": 0 },
+          "usage": {
+            "type": ["object", "null"],
+            "additionalProperties": false,
+            "properties": {
+              "prompt_tokens": { "type": ["integer", "null"], "minimum": 0 },
+              "completion_tokens": { "type": ["integer", "null"], "minimum": 0 },
+              "total_tokens": { "type": ["integer", "null"], "minimum": 0 }
+            }
+          },
+          "groundedness": { "oneOf": [{ "type": "number", "minimum": 0, "maximum": 1 }, { "const": "not_measured" }, { "type": "null" }] },
+          "answer_quality": { "oneOf": [{ "type": "number", "minimum": 0, "maximum": 1 }, { "const": "not_measured" }, { "type": "null" }] },
+          "memory_bytes": { "oneOf": [{ "type": "integer", "minimum": 0 }, { "const": "not_measured" }, { "type": "null" }] },
+          "cost_usd": { "oneOf": [{ "type": "number", "minimum": 0 }, { "const": "not_measured" }, { "type": "null" }] }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["structured_valid_rate", "tool_selection_rate", "groundedness", "answer_quality", "mean_latency_ms", "memory_bytes", "cost_usd"],
+      "properties": {
+        "structured_valid_rate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "tool_selection_rate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "groundedness": { "oneOf": [{ "type": "number", "minimum": 0, "maximum": 1 }, { "const": "not_measured" }, { "type": "null" }] },
+        "answer_quality": { "oneOf": [{ "type": "number", "minimum": 0, "maximum": 1 }, { "const": "not_measured" }, { "type": "null" }] },
+        "mean_latency_ms": { "type": ["number", "null"], "minimum": 0 },
+        "memory_bytes": { "oneOf": [{ "type": "integer", "minimum": 0 }, { "const": "not_measured" }, { "type": "null" }] },
+        "cost_usd": { "oneOf": [{ "type": "number", "minimum": 0 }, { "const": "not_measured" }, { "type": "null" }] }
+      }
+    },
+    "limitations": { "type": "array", "maxItems": 30, "items": { "type": "string", "maxLength": 1000 } },
+    "live_requests_made": { "type": "boolean" }
+  }
+}

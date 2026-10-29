@@ -1,0 +1,126 @@
+{
+  "builds": [
+    {
+      "build_id": "3e4742ad-8cfa-49f2-9fbc-b19160584b5a",
+      "index_version": "c52e242f18fd2188129b11661524d63725ad9bee971567279381a11fad624af0",
+      "manifest_path": "data/manifests/retrieval-index-builds/3e4742ad-8cfa-49f2-9fbc-b19160584b5a.json",
+      "manifest_sha256": "0a83d1bd3833f88c4fd62b64b45c6035f5f01c44a32bcee1061805aa0de4339a",
+      "status": "validated"
+    },
+    {
+      "build_id": "bc7805d1-0b22-439e-9bc6-d263227b4ba6",
+      "index_version": "c52e242f18fd2188129b11661524d63725ad9bee971567279381a11fad624af0",
+      "manifest_path": "data/manifests/retrieval-index-builds/bc7805d1-0b22-439e-9bc6-d263227b4ba6.json",
+      "manifest_sha256": "718a006b8cdccbdcdf87034505c50b2e3d526c1597b83667b54573c4b00df2ac",
+      "status": "validated"
+    },
+    {
+      "build_id": "ed296547-efa9-44cf-a08f-80b6f53eb7db",
+      "index_version": "24375dc2287f9f96908b55c5fa605208fd66740a6924987354601e002414cbe0",
+      "manifest_path": "data/manifests/retrieval-index-builds/ed296547-efa9-44cf-a08f-80b6f53eb7db.json",
+      "manifest_sha256": "e353818a2757906e319bbacccc3511a331d084b2d711507030af6d404279a489",
+      "status": "validated"
+    },
+    {
+      "build_id": "a0606488-d006-4388-af54-8f5ddc22163b",
+      "index_version": "628b5772697e6c2e337580e5bdcc9daac5f0b612f46291808e0895bc2841dd34",
+      "manifest_path": "data/manifests/retrieval-index-builds/a0606488-d006-4388-af54-8f5ddc22163b.json",
+      "manifest_sha256": "d19195b4fd4b1b6d13221c30e28e5df13fbb5300a77b1db50ac57c4e656e45df",
+      "status": "validated"
+    },
+    {
+      "build_id": "4d7312a6-d291-47f5-866b-3b7fc66a776c",
+      "index_version": "628b5772697e6c2e337580e5bdcc9daac5f0b612f46291808e0895bc2841dd34",
+      "manifest_path": "data/manifests/retrieval-index-builds/4d7312a6-d291-47f5-866b-3b7fc66a776c.json",
+      "manifest_sha256": "9e4d4a7ab7b5dc553bde8e1f472a258c687ebb083c3c1dacc2af1ed9d5acb26c",
+      "status": "validated"
+    },
+    {
+      "build_id": "37389670-a914-4d46-8a89-833a6239d352",
+      "index_version": "d37b99cbe117c1526c1ecabe7df847d9c8d97b080f222660c643cbe441e11cf3",
+      "manifest_path": "data/manifests/retrieval-index-builds/37389670-a914-4d46-8a89-833a6239d352.json",
+      "manifest_sha256": "757e80a6cdededfea36c6ec3f590e1377635ae2367b60750e0875071adf300f0",
+      "status": "validated"
+    },
+    {
+      "build_id": "2c1c3327-8552-4973-ba88-0427692fc1db",
+      "index_version": "45935afc940a7489563a38c32bbac909b0d8e6a9fb58182fb5c14e86ff130ea4",
+      "manifest_path": "data/manifests/retrieval-index-builds/2c1c3327-8552-4973-ba88-0427692fc1db.json",
+      "manifest_sha256": "7f785c507f86d96d93da6866b723c375941edd84c7f24e7b0c8a014d83064da4",
+      "status": "validated"
+    },
+    {
+      "build_id": "57da0382-cf47-4ad7-b685-a146a48d1cec",
+      "index_version": "45935afc940a7489563a38c32bbac909b0d8e6a9fb58182fb5c14e86ff130ea4",
+      "manifest_path": "data/manifests/retrieval-index-builds/57da0382-cf47-4ad7-b685-a146a48d1cec.json",
+      "manifest_sha256": "ec53aa1339f86a8a867706378ad3a04e8999e2777a098d409aedd18c9bf8af43",
+      "status": "validated"
+    },
+    {
+      "build_id": "c42789dc-23c1-4821-8a2e-05609dc1ee66",
+      "index_version": "45935afc940a7489563a38c32bbac909b0d8e6a9fb58182fb5c14e86ff130ea4",
+      "manifest_path": "data/manifests/retrieval-index-builds/c42789dc-23c1-4821-8a2e-05609dc1ee66.json",
+      "manifest_sha256": "74991b6a723afd8d1e2a08699fadcf29b2926ba915587b0d2bb35b14d382e301",
+      "status": "validated"
+    },
+    {
+      "build_id": "499573f8-b2a1-4846-9117-a1045e36313b",
+      "index_version": "45935afc940a7489563a38c32bbac909b0d8e6a9fb58182fb5c14e86ff130ea4",
+      "manifest_path": "data/manifests/retrieval-index-builds/499573f8-b2a1-4846-9117-a1045e36313b.json",
+      "manifest_sha256": "0d0e50cd2231e440f109b4ff0f46211734dd66fd6c7c5649eafc95c13be7291d",
+      "status": "validated"
+    },
+    {
+      "build_id": "b20607f7-afb2-4e4b-b1bc-d5996890d80b",
+      "index_version": "45935afc940a7489563a38c32bbac909b0d8e6a9fb58182fb5c14e86ff130ea4",
+      "manifest_path": "data/manifests/retrieval-index-builds/b20607f7-afb2-4e4b-b1bc-d5996890d80b.json",
+      "manifest_sha256": "254bc3e3b3798508ef49778efbba2a551064b3863180a38877cabeb2bfbd7319",
+      "status": "validated"
+    },
+    {
+      "build_id": "8f273b56-9050-43b2-b45a-a8fdf3a0d672",
+      "index_version": "45935afc940a7489563a38c32bbac909b0d8e6a9fb58182fb5c14e86ff130ea4",
+      "manifest_path": "data/manifests/retrieval-index-builds/8f273b56-9050-43b2-b45a-a8fdf3a0d672.json",
+      "manifest_sha256": "43d14f5220a80cd272542d4389fa17a0d6da9f60c8547be1c123c471c537e71c",
+      "status": "validated"
+    },
+    {
+      "build_id": "04af010c-268a-471a-8b9e-9a8481f2936a",
+      "index_version": "45935afc940a7489563a38c32bbac909b0d8e6a9fb58182fb5c14e86ff130ea4",
+      "manifest_path": "data/manifests/retrieval-index-builds/04af010c-268a-471a-8b9e-9a8481f2936a.json",
+      "manifest_sha256": "18a091db6deba88d347cad97e0c627cfe2f5548f6c5aabaf58bddd3ab91e8f16",
+      "status": "validated"
+    },
+    {
+      "build_id": "24728bc3-14dc-4c4e-bdb2-caaa57c88c3b",
+      "index_version": "e7f643de259bb964c20dcc3867e66d99563244d303e1e45b6847a0441c2a4841",
+      "manifest_path": "data/manifests/retrieval-index-builds/24728bc3-14dc-4c4e-bdb2-caaa57c88c3b.json",
+      "manifest_sha256": "6c3055b5b9fbb93884b84e7cc18463b12164c7b61cd8957deccbf456586a8820",
+      "status": "validated"
+    },
+    {
+      "build_id": "b42d0a96-d1a9-4c92-aacb-7184dd68d205",
+      "index_version": "a37cb60a30ceed0feda17c78551db3b03907931adb94bdfe537c09436ef6bb0b",
+      "manifest_path": "data/manifests/retrieval-index-builds/b42d0a96-d1a9-4c92-aacb-7184dd68d205.json",
+      "manifest_sha256": "bcc34ca79c4c3faaec425b03c3ac04bf2ce15c9cfe96385320c012a3bc716c1e",
+      "status": "validated"
+    }
+  ],
+  "failures": [
+    {
+      "build_id": "4f4da0bc-c174-432d-ae03-bd068bac2da9",
+      "error_code": "CANONICAL_INVALID",
+      "finished_at": "2026-10-26T00:07:23.391765+00:00",
+      "message": "Index build failed; active pointer was not changed.",
+      "started_at": "2026-10-26T00:07:23.021335+00:00"
+    },
+    {
+      "build_id": "fc802287-c185-4cae-9cb6-47b1bb2bd7b3",
+      "error_code": "TABLE_ROW_LOCATION_MISSING",
+      "finished_at": "2026-10-26T00:49:00.625756+00:00",
+      "message": "Index build failed; active pointer was not changed.",
+      "started_at": "2026-10-26T00:48:59.557569+00:00"
+    }
+  ],
+  "schema_version": "1.0"
+}

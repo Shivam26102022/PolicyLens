@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/active-index-pointer-v1.json",
+  "title": "PolicyLens Active Retrieval Index Pointer v1",
+  "$defs": {
+    "IndexReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["build_id", "index_version", "manifest_path", "manifest_sha256"],
+      "properties": {
+        "build_id": { "type": "string", "format": "uuid" },
+        "index_version": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "manifest_path": { "type": "string", "pattern": "^data/manifests/retrieval-index-builds/" },
+        "manifest_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "build_id", "index_version", "manifest_path", "manifest_sha256", "updated_at", "previous", "previous_validation_error"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "build_id": { "type": "string", "format": "uuid" },
+    "index_version": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "manifest_path": { "type": "string", "pattern": "^data/manifests/retrieval-index-builds/" },
+    "manifest_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "previous": { "anyOf": [{ "$ref": "#/$defs/IndexReference" }, { "type": "null" }] },
+    "previous_validation_error": { "type": ["string", "null"] }
+  }
+}

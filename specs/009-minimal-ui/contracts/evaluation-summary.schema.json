@@ -1,0 +1,652 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/evaluation-summary-v1.5.json",
+  "title": "PolicyLens read-only evaluation summary v1.5",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "case_set",
+    "runs",
+    "reviewed_case_count",
+    "error_record_count"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.5"
+    },
+    "status": {
+      "enum": [
+        "available",
+        "empty"
+      ]
+    },
+    "case_set": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "case_count",
+        "approved_case_count",
+        "category_count",
+        "category_counts",
+        "split_counts"
+      ],
+      "properties": {
+        "case_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "approved_case_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "category_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "category_counts": {
+          "type": "object",
+          "maxProperties": 40,
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "split_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "dev",
+            "test"
+          ],
+          "properties": {
+            "dev": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "test": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "cases": {
+          "type": "array",
+          "maxItems": 500,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "case_id",
+              "category",
+              "question",
+              "expected_behavior",
+              "difficulty",
+              "split",
+              "review_status",
+              "reference_claims",
+              "required_tools",
+              "forbidden_behaviors",
+              "expected_sources"
+            ],
+            "properties": {
+              "case_id": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "question": {
+                "type": "string"
+              },
+              "expected_behavior": {
+                "type": "string"
+              },
+              "difficulty": {
+                "type": "string"
+              },
+              "split": {
+                "enum": [
+                  "dev",
+                  "test"
+                ]
+              },
+              "review_status": {
+                "type": "string"
+              },
+              "reference_claims": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "required_tools": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "forbidden_behaviors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "expected_sources": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "runs": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "$ref": "#/$defs/run_summary"
+      }
+    },
+    "reviewed_case_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "error_record_count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "$defs": {
+    "nullable_metric": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "nullable_ratio": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "nullable_score": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 5
+    },
+    "nullable_count": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "nullable_score_distribution": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "score_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "expected_behavior_accuracy",
+        "expected_behavior_scored_count",
+        "retrieval_recall_at_k_mean",
+        "retrieval_recall_at_k_scored_count",
+        "retrieval_anchor_hits",
+        "retrieval_anchor_count",
+        "citation_correctness_mean",
+        "citation_correctness_scored_count",
+        "citation_completeness_mean",
+        "citation_completeness_scored_count",
+        "citation_anchor_matches",
+        "citation_anchor_count",
+        "groundedness_mean",
+        "groundedness_scored_count",
+        "groundedness_score_distribution",
+        "answer_relevance_mean",
+        "answer_relevance_scored_count",
+        "validated_tool_result_output_count",
+        "latency_sample_count"
+      ],
+      "properties": {
+        "expected_behavior_accuracy": {
+          "$ref": "#/$defs/nullable_ratio"
+        },
+        "expected_behavior_scored_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "retrieval_recall_at_k_mean": {
+          "$ref": "#/$defs/nullable_ratio"
+        },
+        "retrieval_recall_at_k_scored_count": {
+          "$ref": "#/$defs/nullable_count"
+        },
+        "retrieval_anchor_hits": {
+          "$ref": "#/$defs/nullable_count"
+        },
+        "retrieval_anchor_count": {
+          "$ref": "#/$defs/nullable_count"
+        },
+        "citation_correctness_mean": {
+          "$ref": "#/$defs/nullable_ratio"
+        },
+        "citation_correctness_scored_count": {
+          "$ref": "#/$defs/nullable_count"
+        },
+        "citation_completeness_mean": {
+          "$ref": "#/$defs/nullable_ratio"
+        },
+        "citation_completeness_scored_count": {
+          "$ref": "#/$defs/nullable_count"
+        },
+        "citation_anchor_matches": {
+          "$ref": "#/$defs/nullable_count"
+        },
+        "citation_anchor_count": {
+          "$ref": "#/$defs/nullable_count"
+        },
+        "groundedness_mean": {
+          "$ref": "#/$defs/nullable_score"
+        },
+        "groundedness_scored_count": {
+          "$ref": "#/$defs/nullable_count"
+        },
+        "groundedness_score_distribution": {
+          "$ref": "#/$defs/nullable_score_distribution"
+        },
+        "answer_relevance_mean": {
+          "$ref": "#/$defs/nullable_score"
+        },
+        "answer_relevance_scored_count": {
+          "$ref": "#/$defs/nullable_count"
+        },
+        "validated_tool_result_output_count": {
+          "$ref": "#/$defs/nullable_count"
+        },
+        "latency_sample_count": {
+          "$ref": "#/$defs/nullable_count"
+        }
+      }
+    },
+    "category_breakdown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "category",
+        "result_count",
+        "failed_output_count",
+        "metrics"
+      ],
+      "properties": {
+        "category": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "result_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed_output_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "metrics": {
+          "$ref": "#/$defs/score_metrics"
+        }
+      }
+    },
+    "condition_breakdown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "condition_id",
+        "result_count",
+        "failed_output_count",
+        "metrics",
+        "category_breakdowns"
+      ],
+      "properties": {
+        "condition_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "result_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed_output_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "metrics": {
+          "$ref": "#/$defs/score_metrics"
+        },
+        "category_breakdowns": {
+          "type": "array",
+          "maxItems": 40,
+          "items": {
+            "$ref": "#/$defs/category_breakdown"
+          }
+        }
+      }
+    },
+    "run_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id",
+        "status",
+        "started_at",
+        "finished_at",
+        "split",
+        "case_count",
+        "live_requests_made",
+        "metrics",
+        "condition_breakdowns",
+        "ai_judge",
+        "limitations"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "status": {
+          "enum": [
+            "completed",
+            "partial",
+            "blocked",
+            "failed"
+          ]
+        },
+        "started_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "finished_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "split": {
+          "enum": [
+            "all",
+            "dev",
+            "test"
+          ]
+        },
+        "case_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "live_requests_made": {
+          "type": "boolean"
+        },
+        "metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "expected_behavior_accuracy",
+            "expected_behavior_scored_count",
+            "failed_output_count",
+            "failure_exclusion_applied",
+            "retrieval_recall_at_k_mean",
+            "retrieval_recall_at_k_scored_count",
+            "retrieval_anchor_hits",
+            "retrieval_anchor_count",
+            "citation_correctness_mean",
+            "citation_correctness_scored_count",
+            "citation_completeness_mean",
+            "citation_completeness_scored_count",
+            "citation_anchor_matches",
+            "citation_anchor_count",
+            "groundedness_mean",
+            "groundedness_scored_count",
+            "groundedness_score_distribution",
+            "answer_relevance_mean",
+            "answer_relevance_scored_count",
+            "latency_p50_ms",
+            "latency_p95_ms",
+            "latency_sample_count",
+            "validated_tool_result_output_count",
+            "estimated_cost_usd_total",
+            "estimated_cost_basis",
+            "estimated_cost_pricing_as_of",
+            "estimated_cost_usage_gap_count",
+            "estimated_cost_model_ids"
+          ],
+          "properties": {
+            "expected_behavior_accuracy": {
+              "$ref": "#/$defs/nullable_ratio"
+            },
+            "expected_behavior_scored_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed_output_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failure_exclusion_applied": {
+              "type": "boolean"
+            },
+            "retrieval_recall_at_k_mean": {
+              "$ref": "#/$defs/nullable_ratio"
+            },
+            "retrieval_recall_at_k_scored_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "retrieval_anchor_hits": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "retrieval_anchor_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "citation_correctness_mean": {
+              "$ref": "#/$defs/nullable_ratio"
+            },
+            "citation_correctness_scored_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "citation_completeness_mean": {
+              "$ref": "#/$defs/nullable_ratio"
+            },
+            "citation_completeness_scored_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "citation_anchor_matches": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "citation_anchor_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "groundedness_mean": {
+              "$ref": "#/$defs/nullable_score"
+            },
+            "groundedness_scored_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "groundedness_score_distribution": {
+              "$ref": "#/$defs/nullable_score_distribution"
+            },
+            "answer_relevance_mean": {
+              "$ref": "#/$defs/nullable_score"
+            },
+            "answer_relevance_scored_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "latency_p50_ms": {
+              "$ref": "#/$defs/nullable_metric"
+            },
+            "latency_p95_ms": {
+              "$ref": "#/$defs/nullable_metric"
+            },
+            "latency_sample_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "validated_tool_result_output_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "estimated_cost_usd_total": {
+              "$ref": "#/$defs/nullable_metric"
+            },
+            "estimated_cost_basis": {
+              "enum": [
+                "provider_reported",
+                "token_estimate",
+                "partial_token_estimate",
+                "unavailable"
+              ]
+            },
+            "estimated_cost_pricing_as_of": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "estimated_cost_usage_gap_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "estimated_cost_model_ids": {
+              "type": "array",
+              "maxItems": 10,
+              "items": {
+                "type": "string",
+                "maxLength": 300
+              }
+            },
+            "headline_condition_id": {
+              "type": ["string", "null"]
+            },
+            "baseline_condition_id": {
+              "type": ["string", "null"]
+            },
+            "baseline_expected_behavior_accuracy": {
+              "$ref": "#/$defs/nullable_ratio"
+            },
+            "baseline_expected_behavior_scored_count": {
+              "$ref": "#/$defs/nullable_count"
+            },
+            "paired_accuracy_difference": {
+              "type": ["number", "null"]
+            },
+            "paired_accuracy_difference_lower_95": {
+              "type": ["number", "null"]
+            },
+            "paired_accuracy_difference_upper_95": {
+              "type": ["number", "null"]
+            },
+            "paired_mcnemar_p": {
+              "$ref": "#/$defs/nullable_ratio"
+            },
+            "paired_case_count": {
+              "$ref": "#/$defs/nullable_count"
+            }
+          }
+        },
+        "condition_breakdowns": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "$ref": "#/$defs/condition_breakdown"
+          }
+        },
+        "ai_judge": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "enabled",
+            "rubric_version",
+            "model_ids",
+            "same_model_as_generator",
+            "attempted_count",
+            "scored_count",
+            "failed_count",
+            "skipped_count",
+            "ineligible_output_count"
+          ],
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "rubric_version": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 100
+            },
+            "model_ids": {
+              "type": "array",
+              "maxItems": 10,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              }
+            },
+            "same_model_as_generator": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "attempted_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "scored_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "skipped_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "ineligible_output_count": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "maxItems": 50,
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          }
+        }
+      }
+    }
+  }
+}

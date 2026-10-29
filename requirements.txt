@@ -1,0 +1,13 @@
+# Runtime dependencies for the Vercel Python function (api/index.py).
+# Local development uses uv (see pyproject.toml and uv.lock); keep versions in sync with
+# apps/backend/pyproject.toml and services/mcp-policy-data/pyproject.toml.
+bm25s>=0.2,<1
+chromadb>=1.0,<2
+fastapi==0.162.0
+fastembed>=0.9.1,<1
+mcp==2.3.0
+openai==3.37.0
+openai-agents==0.24.0
+pydantic-settings==2.16.1
+PyYAML>=6,<7
+tiktoken>=0.9,<1

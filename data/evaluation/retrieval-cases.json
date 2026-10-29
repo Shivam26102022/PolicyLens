@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "set_id": "feature003-corpus-anchors-v1",
+  "lineage": "Author-curated engineering cases derived from the current Feature 002 canonical snapshots. Not independently human-reviewed and not representative of the Feature 007 evaluation set.",
+  "cases": [
+    {
+      "case_id": "youth-unemployment-india-2025",
+      "query": "What is the modeled youth unemployment rate in India in 2025?",
+      "filters": { "country_iso3": ["IND"], "years": [2025], "indicator_ids": ["SL.UEM.1524.ZS"] },
+      "expected_anchors": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "row_key": {
+            "dataset_id": "doc:wb-youth-unemployment-1524-2015-2025:5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+            "observation_id": "wb-youth-unemployment-1524-2015-2025:IND:2025",
+            "indicator_id": "SL.UEM.1524.ZS",
+            "country_iso3": "IND",
+            "year": 2025
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "total-unemployment-india-2025",
+      "query": "What is the modeled total unemployment rate in India in 2025?",
+      "filters": { "country_iso3": ["IND"], "years": [2025], "indicator_ids": ["SL.UEM.TOTL.ZS"] },
+      "expected_anchors": [
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "row_key": {
+            "dataset_id": "doc:wb-total-unemployment-2015-2025:ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+            "observation_id": "wb-total-unemployment-2015-2025:IND:2025",
+            "indicator_id": "SL.UEM.TOTL.ZS",
+            "country_iso3": "IND",
+            "year": 2025
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "youth-unemployment-malaysia-2025",
+      "query": "What is the modeled youth unemployment rate in Malaysia in 2025?",
+      "filters": { "country_iso3": ["MYS"], "years": [2025], "indicator_ids": ["SL.UEM.1524.ZS"] },
+      "expected_anchors": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "row_key": {
+            "dataset_id": "doc:wb-youth-unemployment-1524-2015-2025:5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+            "observation_id": "wb-youth-unemployment-1524-2015-2025:MYS:2025",
+            "indicator_id": "SL.UEM.1524.ZS",
+            "country_iso3": "MYS",
+            "year": 2025
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "indonesia-labor-reform-minimum-wage",
+      "query": "Which labor reform topics, including minimum wage, are identified in the Indonesia jobs report?",
+      "filters": { "source_ids": ["wb-indonesia-jobs-action-2018"] },
+      "expected_anchors": [
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "page_number": 6,
+          "marker": "Minimum Wage"
+        }
+      ]
+    },
+    {
+      "case_id": "malaysia-informal-employment-definition",
+      "query": "How does the Malaysia report define informal employment?",
+      "filters": { "source_ids": ["wb-malaysia-informal-employment-2024"] },
+      "expected_anchors": [
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "page_number": 21,
+          "marker": "The informal sector, informal employment"
+        }
+      ]
+    },
+    {
+      "case_id": "india-skills-program-labor-market-impacts",
+      "query": "What labor market impacts of skills development programs are discussed for India?",
+      "filters": { "source_ids": ["wb-india-skills-programs-2015"] },
+      "expected_anchors": [
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "page_number": 18,
+          "marker": "Labor Market Impacts of Skills Development Programs"
+        }
+      ]
+    },
+    {
+      "case_id": "singapore-workforce-tripartite-partnership",
+      "query": "What role did tripartite partnership play in Singapore workforce development?",
+      "filters": { "source_ids": ["wb-singapore-workforce-development-2012"] },
+      "expected_anchors": [
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "page_number": 3,
+          "marker": "development of a strong tripartite partnership"
+        }
+      ]
+    }
+  ]
+}

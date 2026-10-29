@@ -1,0 +1,27 @@
+{
+ "run_id": "7437acdc-972b-433b-b8ff-4f9f4dc31630",
+ "case_set_id": "feature007-candidate-ground-truth-v1",
+ "top_k": 6,
+ "recall_at_6_by_mode_and_anchor_type": {
+  "bm25|page": 0.368,
+  "bm25|row": 0.897,
+  "dense|page": 0.272,
+  "dense|row": 1.0,
+  "hybrid|page": 0.377,
+  "hybrid|row": 1.0,
+  "hybrid+cross_encoder|page": 0.474,
+  "hybrid+cross_encoder|row": 1.0
+ },
+ "recall_at_6_by_mode": {
+  "bm25": 0.646,
+  "dense": 0.654,
+  "hybrid": 0.704,
+  "hybrid+cross_encoder": 0.75
+ },
+ "reranker": {
+  "candidate_count": 20,
+  "enabled": true,
+  "model_id": "jinaai/jina-reranker-v1-tiny-en"
+ },
+ "note": "Retrieval-only run after the per-source-cap fix; 3 chunkers x 40 anchored cases per mode. Recorded in evaluation-run-manifest.json."
+}

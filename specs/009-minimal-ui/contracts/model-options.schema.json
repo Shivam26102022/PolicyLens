@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/model-options-v1.json",
+  "title": "PolicyLens configured model options v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "default_provider", "embedding_provider", "embedding_consent_required", "options"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "default_provider": { "enum": ["openai", "mlx"] },
+    "embedding_provider": { "enum": ["local", "openai"] },
+    "embedding_consent_required": { "type": "boolean" },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": { "$ref": "#/$defs/model_option" }
+    }
+  },
+  "$defs": {
+    "model_option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "route", "model_id", "execution_scope", "configured", "selected_by_default", "consent_required", "reasoning_efforts"],
+      "properties": {
+        "provider": { "enum": ["openai", "mlx"] },
+        "route": { "enum": ["openai_responses", "openai_chat_completions", "mlx_chat_completions"] },
+        "model_id": { "type": ["string", "null"], "minLength": 1, "maxLength": 300 },
+        "execution_scope": { "enum": ["external", "loopback"] },
+        "configured": { "type": "boolean" },
+        "selected_by_default": { "type": "boolean" },
+        "consent_required": { "type": "boolean" },
+        "reasoning_efforts": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "enum": ["none", "low", "medium", "high"] }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "provider": { "const": "openai" } }, "required": ["provider"] },
+          "then": { "properties": { "execution_scope": { "const": "external" }, "consent_required": { "const": true } } }
+        },
+        {
+          "if": { "properties": { "provider": { "const": "mlx" } }, "required": ["provider"] },
+          "then": { "properties": { "execution_scope": { "const": "loopback" }, "consent_required": { "const": false } } }
+        },
+        {
+          "if": { "properties": { "configured": { "const": true } }, "required": ["configured"] },
+          "then": { "properties": { "model_id": { "type": "string", "minLength": 1 } } },
+          "else": { "properties": { "model_id": { "type": "null" } } }
+        }
+      ]
+    }
+  }
+}

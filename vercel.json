@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci --prefix apps/frontend",
+  "buildCommand": "npm run build --prefix apps/frontend",
+  "outputDirectory": "apps/frontend/dist",
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 120,
+      "includeFiles": "{apps/backend/src/**,services/mcp-policy-data/src/**,prompts/**,data/canonical/**,data/manifests/**,data/raw/reports/**,data/evaluation/**,data/indexes/bm25/**,data/indexes/chroma/**,data/indexes/active-index.json,data/indexes/mcp-passage-catalog.json}"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.py" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}

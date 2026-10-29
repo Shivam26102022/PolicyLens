@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyLens acquisition source registry",
+  "type": "object",
+  "required": ["schema_version", "sources"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": [
+        "source_id", "title", "publisher", "source_kind", "format",
+        "acquisition_method", "canonical_url", "download_url",
+        "expected_media_type", "countries", "year_range", "publication_date",
+        "retrieved_at", "sha256", "etag", "last_modified", "parser", "parser_version", "licence", "license_review_status", "attribution",
+        "usage_constraints", "refresh_policy", "sensitivity", "allowed_usage",
+        "local_path", "acquisition_enabled", "mandatory"
+      ],
+      "properties": {
+        "source_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,95}$" },
+        "title": { "type": "string", "minLength": 1 },
+        "publisher": { "type": "string", "minLength": 1 },
+        "source_kind": { "enum": ["structured", "unstructured"] },
+        "format": { "enum": ["json", "pdf"] },
+        "acquisition_method": { "enum": ["api", "https_download"] },
+        "canonical_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "download_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "expected_media_type": { "enum": ["application/json", "application/pdf"] },
+        "indicator_id": { "type": ["string", "null"] },
+        "countries": { "type": "array", "items": { "type": "string", "pattern": "^[A-Z]{3}$" } },
+        "year_range": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "array", "prefixItems": [{ "type": "integer" }, { "type": "integer" }], "minItems": 2, "maxItems": 2 }
+          ]
+        },
+        "publication_date": { "type": ["string", "null"], "format": "date" },
+        "retrieved_at": { "type": ["string", "null"], "format": "date-time" },
+        "sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "etag": { "type": ["string", "null"] },
+        "last_modified": { "type": ["string", "null"] },
+        "parser": { "type": "string", "minLength": 1 },
+        "parser_version": { "type": "string", "minLength": 1 },
+        "licence": { "type": ["string", "null"] },
+        "license_review_status": { "enum": ["verified", "manual_review_required"] },
+        "attribution": { "type": "string", "minLength": 1 },
+        "usage_constraints": { "type": ["string", "null"] },
+        "refresh_policy": { "enum": ["manual", "immutable"] },
+        "sensitivity": { "enum": ["public", "synthetic", "anonymised"] },
+        "allowed_usage": { "type": "array", "items": { "enum": ["retrieval", "evaluation", "statistics"] } },
+        "local_path": { "type": "string", "minLength": 1 },
+        "acquisition_enabled": { "type": "boolean" },
+        "mandatory": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.venv
+.git
+.github
+.specify
+.mypy_cache
+.ruff_cache
+.pytest_cache
+.coverage
+**/node_modules
+**/test-results
+specs
+docs
+.env
+.env.*
+pat.env
+*.pdf
+data/raw

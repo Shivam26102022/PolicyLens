@@ -1,0 +1,3022 @@
+{
+  "schema_version": "1.0",
+  "runs": [
+    {
+      "run_id": "c6047c78-4bf5-4dd3-a964-7028d0bddca4",
+      "started_at": "2026-10-25T15:10:03Z",
+      "finished_at": "2026-10-25T15:10:17Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "structured_parser": "1.0.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.0.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "2aa9399c6fe548b2bcaa152a9d4295a47be93d0fa89d85ebbca4921f9c607580",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.0.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.0.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.0.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "c6ca11708662e4d7e89d0e05c6c045a29cddc1339a987135b117ccc84076496a",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.0.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.0.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "9c7d2a4074a53d51c7b0d7b85c2a9b87def33a4028108969a9b8ef7cdb701031",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "1343bf6f0b70d5ea02b69da04f1146c3fb11557e3d39012fb0e260907177010c",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "a27a6bafd04fb805a860c3fe6622e88c927a2f5a8b1491ab0cb12eed1f2e4348",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "a779db52b2bac81c6904db7543bbd754d8ddae30bf807774ec7cbacbd3b94f92",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "170ab5c8-dbbf-4ed1-b98e-9f2343e7b6ad",
+      "started_at": "2026-10-25T15:12:10Z",
+      "finished_at": "2026-10-25T15:12:24Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "structured_parser": "1.0.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.0.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "2aa9399c6fe548b2bcaa152a9d4295a47be93d0fa89d85ebbca4921f9c607580",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.0.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.0.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.0.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "c6ca11708662e4d7e89d0e05c6c045a29cddc1339a987135b117ccc84076496a",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.0.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.0.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "9c7d2a4074a53d51c7b0d7b85c2a9b87def33a4028108969a9b8ef7cdb701031",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "1343bf6f0b70d5ea02b69da04f1146c3fb11557e3d39012fb0e260907177010c",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "a27a6bafd04fb805a860c3fe6622e88c927a2f5a8b1491ab0cb12eed1f2e4348",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "a779db52b2bac81c6904db7543bbd754d8ddae30bf807774ec7cbacbd3b94f92",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "72a8dc29-b45b-4e98-98a2-cf5190394079",
+      "started_at": "2026-10-25T15:12:31Z",
+      "finished_at": "2026-10-25T15:12:45Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "structured_parser": "1.0.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.0.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "2aa9399c6fe548b2bcaa152a9d4295a47be93d0fa89d85ebbca4921f9c607580",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.0.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.0.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.0.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "c6ca11708662e4d7e89d0e05c6c045a29cddc1339a987135b117ccc84076496a",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.0.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.0.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "9c7d2a4074a53d51c7b0d7b85c2a9b87def33a4028108969a9b8ef7cdb701031",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "1343bf6f0b70d5ea02b69da04f1146c3fb11557e3d39012fb0e260907177010c",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "a27a6bafd04fb805a860c3fe6622e88c927a2f5a8b1491ab0cb12eed1f2e4348",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "a779db52b2bac81c6904db7543bbd754d8ddae30bf807774ec7cbacbd3b94f92",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "bcc1460f-d296-4554-a54a-c76093934538",
+      "started_at": "2026-10-25T15:15:33Z",
+      "finished_at": "2026-10-25T15:15:47Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.0.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.0.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "2aa9399c6fe548b2bcaa152a9d4295a47be93d0fa89d85ebbca4921f9c607580",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.0.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.0.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.0.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "c6ca11708662e4d7e89d0e05c6c045a29cddc1339a987135b117ccc84076496a",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.0.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.0.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "608349d1-56e7-495a-9b02-b8a5c83b657a",
+      "started_at": "2026-10-25T15:18:21Z",
+      "finished_at": "2026-10-25T15:18:36Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "398dcaa3-fdc5-4e93-8bf0-d52c65d6b1ba",
+      "started_at": "2026-10-25T15:19:03Z",
+      "finished_at": "2026-10-25T15:19:17Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "c725cfb7-5762-4d4c-8f90-926a2c335cbe",
+      "started_at": "2026-10-25T15:19:32Z",
+      "finished_at": "2026-10-25T15:19:46Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "1b73b3f5-d9e2-472d-bb32-fbea45d75a17",
+      "started_at": "2026-10-25T15:30:38Z",
+      "finished_at": "2026-10-25T15:30:52Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "f07ecb9b-2c73-4987-b2ba-51f218e04b63",
+      "started_at": "2026-10-25T15:30:57Z",
+      "finished_at": "2026-10-25T15:31:11Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "97479fc6-8dc8-4794-bbdf-b6e2fd70aa08",
+      "started_at": "2026-10-25T15:31:17Z",
+      "finished_at": "2026-10-25T15:31:31Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "33a32dda-f0d2-4a9c-bd83-94ae5b1c2b9a",
+      "started_at": "2026-10-25T15:31:46Z",
+      "finished_at": "2026-10-25T15:32:00Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "c202277c-45a8-47e9-a980-4b1c1cd9f680",
+      "started_at": "2026-10-25T15:32:01Z",
+      "finished_at": "2026-10-25T15:32:14Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "f5239f19-fc54-4100-80ef-2af016331fd3",
+      "started_at": "2026-10-26T01:16:41Z",
+      "finished_at": "2026-10-26T01:16:55Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "de48465e-d636-447d-a695-a499d46cbe10",
+      "started_at": "2026-10-26T01:23:57Z",
+      "finished_at": "2026-10-26T01:24:11Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "67807129-3854-4a56-9d48-a80029d86116",
+      "started_at": "2026-10-26T01:29:48Z",
+      "finished_at": "2026-10-26T01:30:02Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "3518a3aa-4625-4d76-9d7e-4c0ae61e5c00",
+      "started_at": "2026-10-26T02:02:30Z",
+      "finished_at": "2026-10-26T02:02:45Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "a5289804-7464-49f6-9aec-8ebd43977892",
+      "started_at": "2026-10-26T02:28:10Z",
+      "finished_at": "2026-10-26T02:28:25Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "7e338a10-0018-477c-b906-127e78726b81",
+      "started_at": "2026-10-26T02:33:40Z",
+      "finished_at": "2026-10-26T02:33:55Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "3fb18071-17a3-4e3f-9422-730d8b946d34",
+      "started_at": "2026-10-28T16:43:55Z",
+      "finished_at": "2026-10-28T16:44:15Z",
+      "tool_versions": {
+        "python": "3.12.13",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "860659e3e0e23edd9e2ed0ec17b37aaea94959bb963202b6238f659095985b17",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "27fd8155dc9e7da2e76f8599a5f07cef9971cf29971b55c2bf288fc43aab84f0",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    },
+    {
+      "run_id": "df8bd49e-04b0-4a1f-b4c0-405c1e0408e0",
+      "started_at": "2026-10-29T02:59:17Z",
+      "finished_at": "2026-10-29T02:59:32Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "pymupdf": "1.28.2",
+        "report_parser": "report-1.0.0-pymupdf-1.28.2",
+        "structured_parser": "1.1.0"
+      },
+      "status": "completed",
+      "attempts": [
+        {
+          "source_id": "wb-youth-unemployment-1524-2015-2025",
+          "status": "parsed",
+          "input_sha256": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+          "input_path": "data/raw/structured/wb-youth-unemployment-1524-2015-2025/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_path": "data/canonical/structured/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "canonical_sha256": "7f4f4311e8750d7c24527203f140a6be7aec84f538965439a1ebd5491d90918c",
+          "quality_path": "data/processed/quality/wb-youth-unemployment-1524-2015-2025/1.1.0/5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085.json",
+          "quality_sha256": "6185df5f6ceead407c2aff4f8e48bb005f843297a1a0a7417d15b6082b130c08",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-total-unemployment-2015-2025",
+          "status": "parsed",
+          "input_sha256": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e",
+          "input_path": "data/raw/structured/wb-total-unemployment-2015-2025/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_path": "data/canonical/structured/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "canonical_sha256": "29fc879732962d3a402c85a1d85489fb2188646e1757eea4e28d2fd8f64572e3",
+          "quality_path": "data/processed/quality/wb-total-unemployment-2015-2025/1.1.0/ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e.json",
+          "quality_sha256": "56990c4f7334413921f306e729e9fa88bd12f79631231604774a0c06f7db84a5",
+          "quality_status": "pass",
+          "quality_findings": [],
+          "parser_version": "1.1.0"
+        },
+        {
+          "source_id": "wb-indonesia-jobs-action-2018",
+          "status": "parsed",
+          "input_sha256": "f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6",
+          "input_path": "data/raw/reports/wb-indonesia-jobs-action-2018/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.pdf",
+          "canonical_path": "data/canonical/reports/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "canonical_sha256": "346473962b5ed835ed4f4f8d428f13832e9a1d886285a78b524f5eeaf4641d9c",
+          "quality_path": "data/processed/quality/wb-indonesia-jobs-action-2018/report-1.0.0-pymupdf-1.28.2/f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6.json",
+          "quality_sha256": "2512fc19c4d0e2803e2c5aad5bbe989aa54000e85a34da820a4165026d7ba767",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-malaysia-informal-employment-2024",
+          "status": "parsed",
+          "input_sha256": "9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434",
+          "input_path": "data/raw/reports/wb-malaysia-informal-employment-2024/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.pdf",
+          "canonical_path": "data/canonical/reports/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "canonical_sha256": "2d5a2630e9e443420d4e395895988248315ec3843035413b84fd1ef88c2e77e9",
+          "quality_path": "data/processed/quality/wb-malaysia-informal-employment-2024/report-1.0.0-pymupdf-1.28.2/9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434.json",
+          "quality_sha256": "12ab34207bc8d0e2a4b165dfe7a4f7ed4b334ed3ea6e313eb1151f8d5f7e5804",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "EMPTY_PAGES",
+              "severity": "warning",
+              "message": "1 pages contain no extracted text blocks."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "wb-india-skills-programs-2015",
+          "status": "parsed",
+          "input_sha256": "6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5",
+          "input_path": "data/raw/reports/wb-india-skills-programs-2015/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.pdf",
+          "canonical_path": "data/canonical/reports/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "canonical_sha256": "43b08b7802767ce5fad43e92a4e047aede974d9f4297bea2f6b78f2789792796",
+          "quality_path": "data/processed/quality/wb-india-skills-programs-2015/report-1.0.0-pymupdf-1.28.2/6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5.json",
+          "quality_sha256": "9673f2f1ccb875737298c21225083cdf09be10873459811260fc5e316ed1c93e",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        },
+        {
+          "source_id": "mom-singapore-youths-labour-market-2025-manual-review",
+          "status": "skipped",
+          "reason": "disabled"
+        },
+        {
+          "source_id": "wb-singapore-workforce-development-2012",
+          "status": "parsed",
+          "input_sha256": "65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2",
+          "input_path": "data/raw/reports/wb-singapore-workforce-development-2012/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.pdf",
+          "canonical_path": "data/canonical/reports/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "canonical_sha256": "291eeeb8c57580e4fa07a037b298ddb00c7ab484f6357cbd81a32a576c8f54cc",
+          "quality_path": "data/processed/quality/wb-singapore-workforce-development-2012/report-1.0.0-pymupdf-1.28.2/65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2.json",
+          "quality_sha256": "f90fc62ded6197471c2bb57060429d9ecebffc32131e3f6bab550eb0152d17aa",
+          "quality_status": "warning",
+          "quality_findings": [
+            {
+              "code": "OCR_NOT_APPLIED",
+              "severity": "warning",
+              "message": "OCR was not run; scanned-only text may be absent."
+            },
+            {
+              "code": "THIRD_PARTY_RIGHTS_REVIEW",
+              "severity": "info",
+              "message": "Credited third-party content may have separate rights."
+            }
+          ],
+          "parser_version": "report-1.0.0-pymupdf-1.28.2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "runs": [
+    {
+      "run_id": "fbb9c827-cd41-4b47-8bc9-b8eca2f85279",
+      "started_at": "2026-10-25T15:12:45Z",
+      "finished_at": "2026-10-25T15:12:45Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "matplotlib": "3.11.2"
+      },
+      "parameters": {
+        "analysis_version": "1.0.0",
+        "latest_year": 2025,
+        "country_codes": [
+          "SGP",
+          "MYS",
+          "IDN",
+          "IND"
+        ]
+      },
+      "inputs": {
+        "wb-youth-unemployment-1524-2015-2025": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+        "wb-total-unemployment-2015-2025": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e"
+      },
+      "outputs": {
+        "results.md": "b5823ed5be16a62105e2de2632551dad18459b16ae212050c235afaf52528cb9",
+        "youth-unemployment-trends.png": "7b781458fcda5b31524e580829580d83622610957f80eb4504f682d3f4bff578",
+        "latest-youth-vs-total-unemployment.png": "fa5bd498ba9432da94cf2a9388095655da569b6f1ce00fbeda7a16ef4a8ff1cc"
+      },
+      "status": "completed",
+      "warnings": [
+        "Modeled ILO estimates may be revised.",
+        "Youth and total unemployment rates have different denominators."
+      ]
+    },
+    {
+      "run_id": "da021dd8-860a-4558-a6e5-c88c74e80417",
+      "started_at": "2026-10-25T15:19:18Z",
+      "finished_at": "2026-10-25T15:19:18Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "matplotlib": "3.11.2"
+      },
+      "parameters": {
+        "analysis_version": "1.0.0",
+        "latest_year": 2025,
+        "country_codes": [
+          "SGP",
+          "MYS",
+          "IDN",
+          "IND"
+        ]
+      },
+      "inputs": {
+        "wb-youth-unemployment-1524-2015-2025": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+        "wb-total-unemployment-2015-2025": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e"
+      },
+      "outputs": {
+        "results.md": "b5823ed5be16a62105e2de2632551dad18459b16ae212050c235afaf52528cb9",
+        "youth-unemployment-trends.png": "aef3fa37e5b9b59b8043dd1b82deb2c8b424e7da9f5f9c86eb17855e8ecc9e8f",
+        "latest-youth-vs-total-unemployment.png": "2bc397382caa72cf126dbce7de797b431475c7b932f33748f07b32617ece1a0a"
+      },
+      "status": "completed",
+      "warnings": [
+        "Modeled ILO estimates may be revised.",
+        "Youth and total unemployment rates have different denominators."
+      ]
+    },
+    {
+      "run_id": "527675df-8976-48e7-ae85-805f0b5122cd",
+      "started_at": "2026-10-25T15:19:47Z",
+      "finished_at": "2026-10-25T15:19:47Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "matplotlib": "3.11.2"
+      },
+      "parameters": {
+        "analysis_version": "1.0.0",
+        "latest_year": 2025,
+        "country_codes": [
+          "SGP",
+          "MYS",
+          "IDN",
+          "IND"
+        ]
+      },
+      "inputs": {
+        "wb-youth-unemployment-1524-2015-2025": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+        "wb-total-unemployment-2015-2025": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e"
+      },
+      "outputs": {
+        "results.md": "b5823ed5be16a62105e2de2632551dad18459b16ae212050c235afaf52528cb9",
+        "youth-unemployment-trends.png": "aef3fa37e5b9b59b8043dd1b82deb2c8b424e7da9f5f9c86eb17855e8ecc9e8f",
+        "latest-youth-vs-total-unemployment.png": "2bc397382caa72cf126dbce7de797b431475c7b932f33748f07b32617ece1a0a"
+      },
+      "status": "completed",
+      "warnings": [
+        "Modeled ILO estimates may be revised.",
+        "Youth and total unemployment rates have different denominators."
+      ]
+    },
+    {
+      "run_id": "40d8e49e-5828-4e50-834b-ea80f43c9905",
+      "started_at": "2026-10-25T15:31:12Z",
+      "finished_at": "2026-10-25T15:31:12Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "matplotlib": "3.11.2"
+      },
+      "parameters": {
+        "analysis_version": "1.0.0",
+        "latest_year": 2025,
+        "country_codes": [
+          "SGP",
+          "MYS",
+          "IDN",
+          "IND"
+        ]
+      },
+      "inputs": {
+        "wb-youth-unemployment-1524-2015-2025": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+        "wb-total-unemployment-2015-2025": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e"
+      },
+      "outputs": {
+        "results.md": "b5823ed5be16a62105e2de2632551dad18459b16ae212050c235afaf52528cb9",
+        "youth-unemployment-trends.png": "aef3fa37e5b9b59b8043dd1b82deb2c8b424e7da9f5f9c86eb17855e8ecc9e8f",
+        "latest-youth-vs-total-unemployment.png": "2bc397382caa72cf126dbce7de797b431475c7b932f33748f07b32617ece1a0a"
+      },
+      "status": "completed",
+      "warnings": [
+        "Modeled ILO estimates may be revised.",
+        "Youth and total unemployment rates have different denominators."
+      ]
+    },
+    {
+      "run_id": "1708523e-a71b-48f7-9b5a-e27aba518782",
+      "started_at": "2026-10-25T15:31:32Z",
+      "finished_at": "2026-10-25T15:31:32Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "matplotlib": "3.11.2"
+      },
+      "parameters": {
+        "analysis_version": "1.0.0",
+        "latest_year": 2025,
+        "country_codes": [
+          "SGP",
+          "MYS",
+          "IDN",
+          "IND"
+        ]
+      },
+      "inputs": {
+        "wb-youth-unemployment-1524-2015-2025": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+        "wb-total-unemployment-2015-2025": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e"
+      },
+      "outputs": {
+        "results.md": "b5823ed5be16a62105e2de2632551dad18459b16ae212050c235afaf52528cb9",
+        "youth-unemployment-trends.png": "aef3fa37e5b9b59b8043dd1b82deb2c8b424e7da9f5f9c86eb17855e8ecc9e8f",
+        "latest-youth-vs-total-unemployment.png": "2bc397382caa72cf126dbce7de797b431475c7b932f33748f07b32617ece1a0a"
+      },
+      "status": "completed",
+      "warnings": [
+        "Modeled ILO estimates may be revised.",
+        "Youth and total unemployment rates have different denominators."
+      ]
+    },
+    {
+      "run_id": "642fe4fb-2f4d-410d-b935-eeed4f8f8964",
+      "started_at": "2026-10-25T15:32:16Z",
+      "finished_at": "2026-10-25T15:32:16Z",
+      "tool_versions": {
+        "python": "3.12.14",
+        "matplotlib": "3.11.2"
+      },
+      "parameters": {
+        "analysis_version": "1.0.0",
+        "latest_year": 2025,
+        "country_codes": [
+          "SGP",
+          "MYS",
+          "IDN",
+          "IND"
+        ]
+      },
+      "inputs": {
+        "wb-youth-unemployment-1524-2015-2025": "5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085",
+        "wb-total-unemployment-2015-2025": "ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e"
+      },
+      "outputs": {
+        "results.md": "b5823ed5be16a62105e2de2632551dad18459b16ae212050c235afaf52528cb9",
+        "youth-unemployment-trends.png": "aef3fa37e5b9b59b8043dd1b82deb2c8b424e7da9f5f9c86eb17855e8ecc9e8f",
+        "latest-youth-vs-total-unemployment.png": "2bc397382caa72cf126dbce7de797b431475c7b932f33748f07b32617ece1a0a"
+      },
+      "status": "completed",
+      "warnings": [
+        "Modeled ILO estimates may be revised.",
+        "Youth and total unemployment rates have different denominators."
+      ]
+    }
+  ]
+}

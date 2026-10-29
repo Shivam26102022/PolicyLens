@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/agent-provider-selection-v1.json",
+  "title": "PolicyLens per-run provider selection v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["provider", "allow_external_provider"],
+  "properties": {
+    "provider": { "enum": ["openai", "mlx"] },
+    "allow_external_provider": { "type": "boolean" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "provider": { "const": "openai" } }, "required": ["provider"] },
+      "then": { "properties": { "allow_external_provider": { "const": true } } }
+    },
+    {
+      "if": { "properties": { "provider": { "const": "mlx" } }, "required": ["provider"] },
+      "then": { "properties": { "allow_external_provider": { "const": false } } }
+    }
+  ]
+}

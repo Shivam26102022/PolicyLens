@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/retrieval-api-v1.json",
+  "title": "PolicyLens Retrieval API v1",
+  "$defs": {
+    "Filters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true, "maxItems": 20 },
+        "country_iso3": { "type": "array", "items": { "type": "string", "pattern": "^[A-Z]{3}$" }, "uniqueItems": true, "maxItems": 20 },
+        "years": { "type": "array", "items": { "type": "integer", "minimum": 1900, "maximum": 2100 }, "uniqueItems": true, "maxItems": 50 },
+        "indicator_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true, "maxItems": 20 }
+      }
+    },
+    "SearchRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "query", "mode"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "query": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "mode": { "enum": ["bm25", "dense", "hybrid"] },
+        "top_k": { "type": "integer", "minimum": 1, "maximum": 20, "default": 6 },
+        "filters": { "$ref": "#/$defs/Filters" }
+      }
+    },
+    "BlockLocation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["page_number", "block_id", "start_char", "end_char"],
+      "properties": {
+        "page_number": { "type": "integer", "minimum": 1 },
+        "block_id": { "type": "string", "minLength": 1 },
+        "start_char": { "type": "integer", "minimum": 0 },
+        "end_char": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "RowKey": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset_id", "observation_id", "indicator_id", "country_iso3", "year"],
+      "properties": {
+        "dataset_id": { "type": "string", "minLength": 1 },
+        "observation_id": { "type": "string", "minLength": 1 },
+        "indicator_id": { "type": "string", "minLength": 1 },
+        "country_iso3": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "year": { "type": "integer", "minimum": 1900, "maximum": 2100 }
+      }
+    },
+    "Evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["passage_id", "source_id", "title", "publisher", "source_uri", "text", "source_content_sha256", "locations", "row_key", "section_path", "rank", "score", "bm25_rank", "dense_rank", "bm25_score", "dense_score", "reranker_score", "retrieval_mode", "licence"],
+      "properties": {
+        "passage_id": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+        "source_id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "publisher": { "type": "string", "minLength": 1 },
+        "source_uri": { "type": ["string", "null"], "format": "uri" },
+        "text": { "type": "string", "minLength": 1 },
+        "source_content_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "locations": { "type": "array", "items": { "$ref": "#/$defs/BlockLocation" }, "maxItems": 20 },
+        "row_key": { "anyOf": [{ "$ref": "#/$defs/RowKey" }, { "type": "null" }] },
+        "section_path": { "type": "array", "items": { "type": "string" }, "maxItems": 20 },
+        "rank": { "type": "integer", "minimum": 1, "maximum": 20 },
+        "score": { "type": "number" },
+        "bm25_rank": { "type": ["integer", "null"], "minimum": 1 },
+        "dense_rank": { "type": ["integer", "null"], "minimum": 1 },
+        "bm25_score": { "type": ["number", "null"] },
+        "dense_score": { "type": ["number", "null"] },
+        "reranker_score": { "type": ["number", "null"] },
+        "retrieval_mode": { "enum": ["bm25", "dense", "hybrid"] },
+        "licence": { "type": "string", "minLength": 1 }
+      }
+    },
+    "RerankingDiagnostics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "status", "model_id", "candidate_count", "duration_ms", "error_code"],
+      "properties": {
+        "method": { "const": "cross_encoder" },
+        "status": { "enum": ["completed", "failed"] },
+        "model_id": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "candidate_count": { "type": "integer", "minimum": 1, "maximum": 20 },
+        "duration_ms": { "type": "number", "minimum": 0 },
+        "error_code": { "enum": ["RERANKER_UNAVAILABLE", "RERANKER_INVALID_OUTPUT", null] }
+      }
+    },
+    "SearchResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "run_id", "index_version", "status", "evidence", "context", "reranking"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "run_id": { "type": "string", "format": "uuid" },
+        "index_version": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "status": { "enum": ["found", "no_results"] },
+        "evidence": { "type": "array", "items": { "$ref": "#/$defs/Evidence" }, "maxItems": 20 },
+        "context": { "type": "string", "maxLength": 50000 },
+        "reranking": { "anyOf": [{ "$ref": "#/$defs/RerankingDiagnostics" }, { "type": "null" }] }
+      }
+    },
+    "CitationValidationRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "run_id", "claims", "citations"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "run_id": { "type": "string", "format": "uuid" },
+        "claims": { "type": "array", "items": { "$ref": "citation.schema.json#/$defs/Claim" }, "minItems": 1, "maxItems": 20 },
+        "citations": { "type": "array", "items": { "$ref": "citation.schema.json#/$defs/Citation" }, "maxItems": 50 }
+      }
+    },
+    "CitationValidationResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "run_id", "status", "accepted", "rejected", "uncovered_claim_ids"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "run_id": { "type": "string", "format": "uuid" },
+        "status": { "enum": ["valid", "invalid"] },
+        "accepted": { "type": "array", "items": { "$ref": "citation.schema.json#/$defs/Citation" } },
+        "rejected": { "type": "array", "items": { "$ref": "citation.schema.json#/$defs/RejectedCitation" } },
+        "uncovered_claim_ids": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "ApiError": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "error_code", "message"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "error_code": { "enum": ["INDEX_NOT_ACTIVE", "INDEX_INCOMPATIBLE", "EMBEDDING_UNAVAILABLE", "RETRIEVAL_FAILED", "RUN_NOT_FOUND"] },
+        "message": { "type": "string", "maxLength": 300 },
+        "trace_id": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/evaluation-run-v1.json",
+  "title": "PolicyLens Feature 007 evaluation run v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run_id", "status", "started_at", "finished_at", "case_set_id", "case_set_sha256", "corpus_sha256", "configuration_sha256", "configuration", "tool_versions", "results", "artifact_paths", "live_requests_made"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "run_id": { "type": "string", "format": "uuid" },
+    "status": { "enum": ["completed", "partial", "blocked", "failed"] },
+    "started_at": { "type": "string", "format": "date-time" },
+    "finished_at": { "type": ["string", "null"], "format": "date-time" },
+    "case_set_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "case_set_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "corpus_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+    "index_versions": { "type": "array", "maxItems": 10, "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-f0-9]{64}$" } },
+    "prompt_versions": { "type": "array", "maxItems": 10, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 100 } },
+    "model_ids": { "type": "array", "maxItems": 10, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 300 } },
+    "code_revision": { "type": ["string", "null"], "maxLength": 100 },
+    "source_tree_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+    "uv_lock_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+    "configuration_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "configuration": { "type": "object" },
+    "tool_versions": { "type": "object", "additionalProperties": { "type": "string", "maxLength": 100 } },
+    "seed": { "type": ["integer", "null"] },
+    "metrics": { "type": "object" },
+    "results": { "type": "array", "maxItems": 1000, "items": { "type": "object" } },
+    "artifact_paths": { "type": "array", "maxItems": 50, "items": { "type": "string", "minLength": 1, "maxLength": 500 } },
+    "notes": { "type": "array", "maxItems": 50, "items": { "type": "string", "maxLength": 2000 } },
+    "live_requests_made": { "type": "boolean" }
+  }
+}

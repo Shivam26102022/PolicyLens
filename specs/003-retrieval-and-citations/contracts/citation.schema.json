@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/citation-v1.json",
+  "title": "PolicyLens Claim and Citation Contract v1",
+  "$defs": {
+    "Claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "text"],
+      "properties": {
+        "claim_id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "text": { "type": "string", "minLength": 1, "maxLength": 2000 }
+      }
+    },
+    "Citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "source_id", "title", "passage_id", "excerpt", "source_content_sha256", "retrieval_rank", "retrieval_score", "retrieval_mode"],
+      "properties": {
+        "claim_id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "source_id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "source_uri": { "type": ["string", "null"], "format": "uri" },
+        "passage_id": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+        "page_start": { "type": ["integer", "null"], "minimum": 1 },
+        "page_end": { "type": ["integer", "null"], "minimum": 1 },
+        "section_path": { "type": "array", "items": { "type": "string" }, "maxItems": 20 },
+        "row_key": { "type": ["object", "null"] },
+        "excerpt": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "source_content_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "retrieval_rank": { "type": "integer", "minimum": 1, "maximum": 20 },
+        "retrieval_score": { "type": "number" },
+        "retrieval_mode": { "enum": ["bm25", "dense", "hybrid"] }
+      }
+    },
+    "RejectedCitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["citation", "reason_code"],
+      "properties": {
+        "citation": { "$ref": "#/$defs/Citation" },
+        "reason_code": { "enum": ["RUN_NOT_FOUND", "PASSAGE_NOT_RETURNED", "CLAIM_NOT_FOUND", "SOURCE_MISMATCH", "HASH_MISMATCH", "LOCATION_MISMATCH", "QUOTE_NOT_EXACT", "QUOTE_TOO_LONG", "DUPLICATE_CITATION"] }
+      }
+    },
+    "ValidationResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "run_id", "status", "accepted", "rejected", "uncovered_claim_ids"],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "run_id": { "type": "string", "format": "uuid" },
+        "status": { "enum": ["valid", "invalid"] },
+        "accepted": { "type": "array", "items": { "$ref": "#/$defs/Citation" } },
+        "rejected": { "type": "array", "items": { "$ref": "#/$defs/RejectedCitation" } },
+        "uncovered_claim_ids": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

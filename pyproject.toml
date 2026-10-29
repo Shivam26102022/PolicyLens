@@ -1,0 +1,33 @@
+[project]
+name = "policylens-workspace"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+	"policylens",
+	"policylens-mcp",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["apps/backend", "services/mcp-policy-data"]
+
+[tool.uv.sources]
+policylens = { workspace = true }
+policylens-mcp = { workspace = true }
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["apps/backend/src", "services/mcp-policy-data/src", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.12"
+mypy_path = ["apps/backend/src", "services/mcp-policy-data/src"]
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_unused_configs = true

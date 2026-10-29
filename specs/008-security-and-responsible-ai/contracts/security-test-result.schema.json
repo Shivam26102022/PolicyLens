@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/security-test-result-v1.json",
+  "title": "PolicyLens security fixture result v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "fixture_id", "boundary_id", "result", "expected_invariant", "observed_summary", "test_reference", "environment", "live_requests_made"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "fixture_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "boundary_id": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "result": { "enum": ["pass", "fail", "blocked", "not_tested"] },
+    "expected_invariant": { "type": "string", "minLength": 1, "maxLength": 1000 },
+    "observed_summary": { "type": "string", "maxLength": 1000 },
+    "test_reference": { "type": "string", "minLength": 1, "maxLength": 500 },
+    "artifact_reference": { "type": ["string", "null"], "maxLength": 500 },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["execution_mode", "python_version", "dependency_lock_sha256"],
+      "properties": {
+        "execution_mode": { "enum": ["offline", "explicit_opt_in"] },
+        "python_version": { "type": "string", "minLength": 1, "maxLength": 32 },
+        "dependency_lock_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "code_revision": { "type": ["string", "null"], "maxLength": 100 }
+      }
+    },
+    "live_requests_made": { "type": "boolean" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "environment": { "properties": { "execution_mode": { "const": "offline" } } } } },
+      "then": { "properties": { "live_requests_made": { "const": false } } }
+    }
+  ]
+}

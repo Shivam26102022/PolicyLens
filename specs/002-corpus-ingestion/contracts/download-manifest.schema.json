@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyLens acquisition run manifest",
+  "type": "object",
+  "required": ["schema_version", "run_id", "started_at", "finished_at", "tool_version", "git_commit", "script_sha256", "attempts"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "started_at": { "type": "string", "format": "date-time" },
+    "finished_at": { "type": "string", "format": "date-time" },
+    "tool_version": { "type": "string" },
+    "git_commit": { "type": ["string", "null"] },
+    "script_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_id", "status", "retrieved_at", "http_status", "final_url", "content_type", "bytes", "sha256", "local_path", "elapsed_seconds", "error_code", "error_message"],
+        "properties": {
+          "source_id": { "type": "string" },
+          "status": { "enum": ["downloaded", "unchanged", "failed"] },
+          "retrieved_at": { "type": "string", "format": "date-time" },
+          "http_status": { "type": ["integer", "null"], "minimum": 100, "maximum": 599 },
+          "final_url": { "type": ["string", "null"], "format": "uri" },
+          "content_type": { "type": ["string", "null"] },
+          "bytes": { "type": ["integer", "null"], "minimum": 0 },
+          "sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+          "local_path": { "type": ["string", "null"] },
+          "elapsed_seconds": { "type": "number", "minimum": 0 },
+          "etag": { "type": ["string", "null"] },
+          "last_modified": { "type": ["string", "null"] },
+          "error_code": { "type": ["string", "null"] },
+          "error_message": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,260 @@
+schema_version: '1.0'
+sources:
+- source_id: wb-youth-unemployment-1524-2015-2025
+  title: Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO
+    estimate)
+  publisher: International Labour Organization (ILOSTAT), distributed via World Bank
+    Data
+  source_kind: structured
+  format: json
+  acquisition_method: api
+  canonical_url: https://data.worldbank.org/indicator/SL.UEM.1524.ZS
+  download_url: https://api.worldbank.org/v2/country/SGP;MYS;IDN;IND/indicator/SL.UEM.1524.ZS?date=2015:2025&format=json&per_page=1000
+  expected_media_type: application/json
+  indicator_id: SL.UEM.1524.ZS
+  countries:
+  - SGP
+  - MYS
+  - IDN
+  - IND
+  year_range:
+  - 2015
+  - 2025
+  publication_date: null
+  retrieved_at: '2026-10-28T16:43:44Z'
+  sha256: 5d9da42f9cabafe5788093910dbff45c684cba9a1baad0d4cab993790b281085
+  etag: null
+  last_modified: Wed, 28 Oct 2026 16:43:45 GMT
+  parser: worldbank-json-validation
+  parser_version: '1.0'
+  licence: CC BY 4.0
+  license_review_status: verified
+  attribution: Attribute ILOSTAT and World Bank Data; include access date and indicate
+    changes.
+  usage_constraints: Modeled ILO estimates; values may be revised. Do not present
+    as national-estimate data.
+  refresh_policy: manual
+  sensitivity: public
+  allowed_usage:
+  - retrieval
+  - evaluation
+  - statistics
+  local_path: data/raw/structured/wb-youth-unemployment-1524-2015-2025/{sha256}.json
+  acquisition_enabled: true
+  mandatory: true
+- source_id: wb-total-unemployment-2015-2025
+  title: Unemployment, total (% of total labor force) (modeled ILO estimate)
+  publisher: International Labour Organization (ILOSTAT), distributed via World Bank
+    Data
+  source_kind: structured
+  format: json
+  acquisition_method: api
+  canonical_url: https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS
+  download_url: https://api.worldbank.org/v2/country/SGP;MYS;IDN;IND/indicator/SL.UEM.TOTL.ZS?date=2015:2025&format=json&per_page=1000
+  expected_media_type: application/json
+  indicator_id: SL.UEM.TOTL.ZS
+  countries:
+  - SGP
+  - MYS
+  - IDN
+  - IND
+  year_range:
+  - 2015
+  - 2025
+  publication_date: null
+  retrieved_at: '2026-10-28T16:43:45Z'
+  sha256: ff45778aa411adc612e8df5ae4856b63894c3c91e46c02b4be4e5e30709c722e
+  etag: null
+  last_modified: Wed, 28 Oct 2026 16:43:45 GMT
+  parser: worldbank-json-validation
+  parser_version: '1.0'
+  licence: CC BY 4.0
+  license_review_status: verified
+  attribution: Attribute ILOSTAT and World Bank Data; include access date and indicate
+    changes.
+  usage_constraints: Modeled ILO estimates; values may be revised. Do not present
+    as national-estimate data.
+  refresh_policy: manual
+  sensitivity: public
+  allowed_usage:
+  - retrieval
+  - evaluation
+  - statistics
+  local_path: data/raw/structured/wb-total-unemployment-2015-2025/{sha256}.json
+  acquisition_enabled: true
+  mandatory: true
+- source_id: wb-indonesia-jobs-action-2018
+  title: 'Indonesia Jobs Action Program Towards Win-Win: A Labor Reform Strategy to
+    Benefit All'
+  publisher: World Bank Group
+  source_kind: unstructured
+  format: pdf
+  acquisition_method: https_download
+  canonical_url: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/361621624942826086
+  download_url: https://documents1.worldbank.org/curated/en/361621624942826086/pdf/Indonesia-Jobs-Action-Program-Towards-Win-Win-A-Labor-Reform-Strategy-to-Benefit-All.pdf
+  expected_media_type: application/pdf
+  indicator_id: null
+  countries:
+  - IDN
+  year_range: null
+  publication_date: '2018-08-01'
+  retrieved_at: '2026-10-28T16:43:45Z'
+  sha256: f98fce9bbc0f1485f04e2e6167fc157dcdf512223fab100428006ecacf39dcd6
+  etag: null
+  last_modified: Sat, 24 Oct 2026 14:53:47 GMT
+  parser: pymupdf
+  parser_version: 1.28.2
+  licence: 'World Bank Rights and Permissions: reproduction in whole or part for noncommercial
+    purposes with full attribution; not a Creative Commons licence.'
+  license_review_status: verified
+  attribution: Use the complete World Bank item-page citation and URL.
+  usage_constraints: Noncommercial research only; keep local and do not redistribute.
+    Third-party components may have separate rights.
+  refresh_policy: manual
+  sensitivity: public
+  allowed_usage:
+  - retrieval
+  - evaluation
+  local_path: data/raw/reports/wb-indonesia-jobs-action-2018/{sha256}.pdf
+  acquisition_enabled: true
+  mandatory: true
+- source_id: wb-malaysia-informal-employment-2024
+  title: 'Informal Employment in Malaysia: Trends, Challenges and Opportunities for
+    Reform'
+  publisher: World Bank Group
+  source_kind: unstructured
+  format: pdf
+  acquisition_method: https_download
+  canonical_url: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099022124104015011
+  download_url: https://documents1.worldbank.org/curated/en/099022124104015011/pdf/P1810931e836170db184871b5fe7b37157c.pdf
+  expected_media_type: application/pdf
+  indicator_id: null
+  countries:
+  - MYS
+  year_range: null
+  publication_date: '2024-02-22'
+  retrieved_at: '2026-10-28T16:43:46Z'
+  sha256: 9b8c5d178441665072dbf7ff3700b1e016dc68a3c5fdfd24b8dfad040479f434
+  etag: null
+  last_modified: Fri, 23 Oct 2026 08:46:42 GMT
+  parser: pymupdf
+  parser_version: 1.28.2
+  licence: 'World Bank Rights and Permissions: reproduction in whole or part for noncommercial
+    purposes with full attribution; not a Creative Commons licence.'
+  license_review_status: verified
+  attribution: Use the complete World Bank item-page citation and URL.
+  usage_constraints: Noncommercial research only; keep local and do not redistribute.
+    Third-party components may have separate rights.
+  refresh_policy: manual
+  sensitivity: public
+  allowed_usage:
+  - retrieval
+  - evaluation
+  local_path: data/raw/reports/wb-malaysia-informal-employment-2024/{sha256}.pdf
+  acquisition_enabled: true
+  mandatory: true
+- source_id: wb-india-skills-programs-2015
+  title: Labor Market Impacts and Effectiveness of Skills Development Programs in
+    5 States in India
+  publisher: World Bank Group
+  source_kind: unstructured
+  format: pdf
+  acquisition_method: https_download
+  canonical_url: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/798601468034846280
+  download_url: https://documents1.worldbank.org/curated/en/798601468034846280/pdf/94682-Change-in-Title-Final-Revised-Output-Skill-Report-5-States.pdf
+  expected_media_type: application/pdf
+  indicator_id: null
+  countries:
+  - IND
+  year_range: null
+  publication_date: '2015-04-01'
+  retrieved_at: '2026-10-28T16:43:46Z'
+  sha256: 6ba3938f4f02e26016169b99233f45688903580e5956f2bf8d16eb1c14437ce5
+  etag: null
+  last_modified: Sun, 25 Oct 2026 11:01:27 GMT
+  parser: pymupdf
+  parser_version: 1.28.2
+  licence: CC BY 3.0 IGO
+  license_review_status: verified
+  attribution: 'Meky, Muna Salih. 2015. Labor Market Impacts and Effectiveness of
+    Skills Development Programs in 5 States in India: Assam, Andhra Pradesh, Madhya
+    Pradesh, Odisha, and Rajasthan. Washington, DC: World Bank Group. DOI 10.1596/22391.
+    CC BY 3.0 IGO; indicate changes.'
+  usage_constraints: CC BY 3.0 IGO requires attribution and indication of changes;
+    credited third-party material may have separate rights.
+  refresh_policy: manual
+  sensitivity: public
+  allowed_usage:
+  - retrieval
+  - evaluation
+  local_path: data/raw/reports/wb-india-skills-programs-2015/{sha256}.pdf
+  acquisition_enabled: true
+  mandatory: true
+- source_id: mom-singapore-youths-labour-market-2025-manual-review
+  title: Youths In The Labour Market 2025
+  publisher: Manpower Research and Statistics Department, Ministry of Manpower, Singapore
+  source_kind: unstructured
+  format: pdf
+  acquisition_method: https_download
+  canonical_url: https://stats.mom.gov.sg/Pages/Youths-In-The-Labour-Market-2025.aspx
+  download_url: https://stats.mom.gov.sg/iMAS_PdfLibrary/mrsd-Youths-in-the-Labour-Market-2025.pdf
+  expected_media_type: application/pdf
+  indicator_id: null
+  countries:
+  - SGP
+  year_range:
+  - 2025
+  - 2025
+  publication_date: '2026-03-26'
+  retrieved_at: null
+  sha256: null
+  etag: null
+  last_modified: null
+  parser: pymupdf
+  parser_version: 1.28.2
+  licence: null
+  license_review_status: manual_review_required
+  attribution: Ministry of Manpower, Youths In The Labour Market 2025. Rights clearance
+    pending.
+  usage_constraints: PDF states all rights reserved and further reproduction requires
+    written permission. Do not download until reuse for corpus storage is approved.
+  refresh_policy: manual
+  sensitivity: public
+  allowed_usage: []
+  local_path: data/raw/reports/mom-singapore-youths-labour-market-2025-manual-review/{sha256}.pdf
+  acquisition_enabled: false
+  mandatory: false
+- source_id: wb-singapore-workforce-development-2012
+  title: 'SABER Workforce Development Country Report: Singapore 2012'
+  publisher: World Bank
+  source_kind: unstructured
+  format: pdf
+  acquisition_method: https_download
+  canonical_url: https://documents.worldbank.org/en/publication/documents-reports/documentdetail/101071468299971244
+  download_url: https://documents1.worldbank.org/curated/en/101071468299971244/pdf/799250WP0SABER0Box0379795B00PUBLIC0.pdf
+  expected_media_type: application/pdf
+  indicator_id: null
+  countries:
+  - SGP
+  year_range: null
+  publication_date: '2012-01-01'
+  retrieved_at: '2026-10-28T16:43:47Z'
+  sha256: 65375db3691597f0814c757e2ddc6163739180c2bfe6699ce021eaa1388c8db2
+  etag: null
+  last_modified: Sun, 25 Oct 2026 14:01:36 GMT
+  parser: pymupdf
+  parser_version: 1.28.2
+  licence: CC BY 3.0 IGO
+  license_review_status: verified
+  attribution: 'World Bank. 2012. Singapore: Workforce Development. SABER country
+    report. DOI 10.1596/17646. CC BY 3.0 IGO; indicate changes.'
+  usage_constraints: CC BY 3.0 IGO requires attribution and indication of changes;
+    credited third-party material may have separate rights.
+  refresh_policy: manual
+  sensitivity: public
+  allowed_usage:
+  - retrieval
+  - evaluation
+  local_path: data/raw/reports/wb-singapore-workforce-development-2012/{sha256}.pdf
+  acquisition_enabled: true
+  mandatory: true

@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "evaluation_id": "conversation-memory-v1",
+  "seed": null,
+  "retriever": "deterministic BM25-style lexical fixture ranker; not the production Chroma embedding adapter",
+  "categories": [
+    {
+      "name": "same_topic_follow_up",
+      "query": "compare the prior year youth unemployment estimate in India",
+      "relevant_memory_ids": [
+        "youth-unemployment-india-2025",
+        "youth-unemployment-india-2020"
+      ],
+      "memories": [
+        {
+          "id": "youth-unemployment-india-2025",
+          "text": "The prior discussion compared India's youth unemployment estimate for 2025."
+        },
+        {
+          "id": "youth-unemployment-india-2020",
+          "text": "We reviewed the youth unemployment estimate in India for the year 2020."
+        },
+        {
+          "id": "adult-unemployment-india",
+          "text": "The question concerned adult unemployment rates in India."
+        },
+        {
+          "id": "youth-unemployment-singapore",
+          "text": "We discussed youth unemployment estimates in Singapore."
+        },
+        {
+          "id": "india-gdp-growth",
+          "text": "The previous topic was India's annual GDP growth."
+        },
+        {
+          "id": "youth-school-enrollment",
+          "text": "We examined youth school enrollment data in India."
+        }
+      ]
+    },
+    {
+      "name": "cross_topic_preference",
+      "query": "use the regional policy report we discussed about job placement programs",
+      "relevant_memory_ids": [
+        "regional-job-placement-report",
+        "placement-program-comparison"
+      ],
+      "memories": [
+        {
+          "id": "regional-job-placement-report",
+          "text": "The user asked to prioritize the regional policy report about job placement programs."
+        },
+        {
+          "id": "placement-program-comparison",
+          "text": "We compared job placement programs across countries using a regional report."
+        },
+        {
+          "id": "regional-health-report",
+          "text": "We reviewed a regional public health policy report."
+        },
+        {
+          "id": "job-vacancy-series",
+          "text": "The prior question concerned job vacancy statistics."
+        },
+        {
+          "id": "training-program-budget",
+          "text": "We discussed the budget for a workforce training program."
+        },
+        {
+          "id": "regional-transport-policy",
+          "text": "The conversation covered regional public transport policy."
+        }
+      ]
+    },
+    {
+      "name": "unrelated_query",
+      "query": "summarize the synthetic coastal flood insurance question",
+      "relevant_memory_ids": [],
+      "memories": [
+        {
+          "id": "child-health-indicator",
+          "text": "We reviewed a synthetic child health indicator."
+        },
+        {
+          "id": "employment-projection",
+          "text": "The discussion compared employment projections."
+        },
+        {
+          "id": "rural-education-spending",
+          "text": "We examined rural education spending."
+        },
+        {
+          "id": "food-price-index",
+          "text": "The previous topic was a food price index."
+        },
+        {
+          "id": "public-transport-access",
+          "text": "We discussed public transport accessibility."
+        },
+        {
+          "id": "energy-subsidy-policy",
+          "text": "The conversation concerned energy subsidy policy."
+        }
+      ]
+    }
+  ]
+}

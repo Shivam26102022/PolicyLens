@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://policylens.local/schemas/mcp-host-capabilities-v1.json",
+  "title": "PolicyLens MCP host allow-list v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "server_name", "server_version", "protocol_version", "tools", "resource_templates"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "server_name": { "const": "PolicyLens Policy Data Server" },
+    "server_version": { "const": "0.1.0" },
+    "protocol_version": { "const": "2026-07-28" },
+    "tools": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "schema_version", "input_schema_sha256", "output_schema_sha256", "read_only"],
+        "properties": {
+          "name": { "const": "query_statistics" },
+          "schema_version": { "const": "1.0" },
+          "input_schema_sha256": { "const": "05ccc560603964c9d2723d2da6ab63d6c5fd7e2f80a471326e0df04f677004a0" },
+          "output_schema_sha256": { "const": "aa505bc99655a8828e050e2c4752a4bed7bcdb04b87b3165c275d4a89ef956d0" },
+          "read_only": { "const": true }
+        }
+      }
+    },
+    "resource_templates": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["uri_template", "schema_version", "read_only"],
+        "properties": {
+          "uri_template": { "const": "policy://sources/{source_id}/passages/{passage_id}" },
+          "schema_version": { "const": "1.0" },
+          "read_only": { "const": true }
+        }
+      }
+    }
+  }
+}

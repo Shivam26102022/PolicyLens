@@ -1,0 +1,57 @@
+{
+  "runs": [
+    {
+      "case_count": 6,
+      "case_set_id": "feature004-agent-tool-engineering-v1",
+      "case_set_sha256": "a8f0b1f0bacacbb00631cf194059fa6a795e8a082cfbe4cd4bc6a29193b3da0c",
+      "created_at": "2026-10-26T03:41:48.962043+00:00",
+      "live_request_made": false,
+      "metrics": null,
+      "reason": "Live comparison was not requested.",
+      "reason_code": "LIVE_COMPARISON_NOT_REQUESTED",
+      "run_id": "8b4aec79-c2cf-44c0-a0bb-1f966d3270cc",
+      "schema_version": "1.0",
+      "status": "not_run"
+    },
+    {
+      "case_count": 6,
+      "case_set_id": "feature004-agent-tool-engineering-v1",
+      "case_set_sha256": "a8f0b1f0bacacbb00631cf194059fa6a795e8a082cfbe4cd4bc6a29193b3da0c",
+      "created_at": "2026-10-26T03:41:56.453678+00:00",
+      "live_request_made": false,
+      "metrics": null,
+      "reason": "Foundry deployment requires OPENAI_BASE_URL.",
+      "reason_code": "OPENAI_BASE_URL_REQUIRED",
+      "run_id": "1fab272f-cd45-4fbe-84d1-5d98e5d942f9",
+      "schema_version": "1.0",
+      "status": "blocked"
+    },
+    {
+      "case_count": 6,
+      "case_set_id": "feature004-agent-tool-engineering-v1",
+      "case_set_sha256": "a8f0b1f0bacacbb00631cf194059fa6a795e8a082cfbe4cd4bc6a29193b3da0c",
+      "created_at": "2026-10-26T03:58:35.642150+00:00",
+      "live_request_made": false,
+      "metrics": null,
+      "reason": "Foundry deployment requires OPENAI_BASE_URL.",
+      "reason_code": "OPENAI_BASE_URL_REQUIRED",
+      "run_id": "5d8a9bce-1198-44ac-91d0-a139635282c3",
+      "schema_version": "1.0",
+      "status": "blocked"
+    },
+    {
+      "case_count": 6,
+      "case_set_id": "feature004-agent-tool-engineering-v1",
+      "case_set_sha256": "a8f0b1f0bacacbb00631cf194059fa6a795e8a082cfbe4cd4bc6a29193b3da0c",
+      "created_at": "2026-10-26T04:04:00.926392+00:00",
+      "live_request_made": false,
+      "metrics": null,
+      "reason": "The production statistics MCP adapter is owned by Feature 005 and is not available yet.",
+      "reason_code": "FEATURE_005_ADAPTER_NOT_AVAILABLE",
+      "run_id": "dcced7aa-31c9-44a6-8b79-785a7398d197",
+      "schema_version": "1.0",
+      "status": "blocked"
+    }
+  ],
+  "schema_version": "1.0"
+}
